@@ -1,0 +1,1132 @@
+/* korail.css */
+
+#wrap { width:100%; height:auto; min-height:500px; margin:auto; }
+
+h2 { text-transform: uppercase; font-size:30px; }
+h2 > span { color:var(--color-main);}
+
+
+/* 공통 */
+#headBox  { width:100%; margin:auto; background-color:var(--color-white);}
+#adverBox { width:100%; margin:auto; }
+#iconBox { width:100%; margin:auto; background-color:#f6f8ff;}
+#conBox { width:100%; margin:auto; background-color:var(--color-white);}
+#reservationBox { width:100%; margin:auto;}
+#newsBox { width:100%; margin:auto; background-color:var(--color-white);}
+#footBox { width:100%; margin:auto; background-color:var(--color-gray);}
+
+
+
+
+/* design size 460px */
+@media screen and (max-width:480px) {
+
+    #wrap a { color:#333;}
+
+    /* headBox */
+    #headBox { position: relative; height:60px; padding:10px; box-sizing: border-box; }
+    
+    .align { display:flex; justify-content: space-between;  }
+
+    #headBox h1 { 
+        position: absolute; left:50%; z-index: 50; transform: translateX(-50%);
+        width:100px; height:40px;
+        background-image: url(../img/icon/Korail_logo.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size:contain; }
+
+    #headBox .gnbBox { order:1; }    
+    /* #headBox h1 { order:2; }     */
+    #headBox .unbBox { order:2; }    
+
+    /* unbBox */
+    .unbBox { width:auto; height:40px; }
+
+    .unbBox > ul { display:flex; flex-direction: column; width:100%; height:100%; }
+
+    .unbBox > ul > li { width:100%; height:100%; text-align: right; font-size:12px; line-height: 20px; }
+
+    .unbBox > ul > li:last-child { display:none; }
+
+    .unbBox a { display:block; width: 100%; height: 100%; }
+
+    /* gnbBox */
+    .gnbBox_wrap { width:40px; height:40px;
+        background-image: url(../img/icon/toggle_btn.jpg);
+        background-position:50% 50%;
+        background-repeat: inherit;
+        background-size: contain; 
+    }
+
+    /* gnbBox 클릭 */
+    .gnbBox { 
+        display: none;
+        position: absolute; top:0; left:0; z-index:1000;
+        width:70%; height:500px; background-color: var(--color-white);
+        transition:all 500ms linear; }
+    
+    .gnbBox > .gnb_list { width:100%; height:auto; }
+
+    .gnbBox.action { left:0; }
+
+    .gnb_open_btn { 
+        position: absolute; top:5px; right:5px; z-index:900;
+        width:20px; height:20px; 
+        background-image: url(../img/icon/close.png);
+        background-position:50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    .intro_area { 
+        width:100%; height:150px; 
+        padding:55px 0; box-sizing: border-box; 
+        font-family:'NanumGothic'; text-align: center;
+        font-size:15px; font-weight: 500; 
+        color:var(--color-white); background-color: var(--color-main); }
+
+    .gnbBox li { width:100%; height:auto;  background-color: cornflowerblue; }
+
+    .gnbBox dl { width:100%; height:auto; background-color:var(--color-white); }
+
+    .gnbBox dt { 
+        width: 100%; height:37px; 
+        border-bottom:1px solid #bdbebd;
+        border-top:1px solid #bdbebd;
+        box-sizing: border-box;
+        font-weight:600; 
+        font-size:13px; font-family:'NanumGothic'; line-height:37px;
+        text-indent:30px; }
+
+    .gnbBox dd { 
+       display: none;
+        width: 100%; height:30px; 
+        font-size:11px; font-family:'Malgun Gothic'; line-height:30px;
+        text-indent:30px; }
+    
+      .gnbBox dd > a { 
+        display:block;
+        width:100%; height:100%; }
+    
+      .gnbBox dt > a { 
+          display:block; width: 100%; height: 100%;
+        
+         
+         }
+
+      
+    /* adverBox */
+    #adverBox { position: relative; height:76.086vw/*350px*/; }
+    /* indicator */
+    .adver_indicator { 
+        position: absolute; top:20px; left:20px; z-index:900;
+        width:auto; height:auto; }
+
+    .adver_indicator > ul { display:flex; width: 100%; height: 100%; }
+
+    .adver_indicator li { 
+        overflow: hidden;
+        width:15px; height:15px; 
+        margin-right:10px; border-radius:100%; 
+        background-color: #fff; } 
+
+    .adver_indicator a { display:block; width: 100%; height: 100%; }
+
+    .adver_indicator li.action a { background-color: var(--color-main);}
+    
+    .adver_area { 
+        overflow: hidden; 
+        position: relative; width: 100%; height: 100%; 
+        background-color: #ddd; }
+
+    .adver_area > ul { position: absolute; width:500%; height:100%; }    
+    .adver_area li { 
+        display:flex; width: 20%; height:100%;
+        background-position: 50% 50%;
+        background-repeat:no-repeat;
+        background-size: contain;
+     }    
+
+    /* .adver_img > .adver_01 { background-image: url(../);} */
+    /* .adver_img > .adver_02 { background-image: url(../);} */
+    /* .adver_img > .adver_03 { background-image: url(../);} */
+    /* .adver_img > .adver_04 { background-image: url(../);} */
+    /* .adver_img > .adver_05 { background-image: url(../);} */
+
+    .ticket_button { 
+        position: absolute; left:50%; top:50%; 
+        transform: translate(-50%,-50%); 
+        width:200px; height:auto;  text-align: center;
+        font-size:20px; font-family:var(--font-nanum);  font-weight:600; }
+
+
+    /* iconBox */
+    #iconBox { height:480px; padding:90px 10px; box-sizing: border-box;  }
+
+    .icon_area { width: 100%; height:auto; }
+
+    .icon_area > ul { 
+        display:flex; flex-wrap: wrap; justify-content: space-around; 
+        width:100%; max-width: 460px; height:300px; }
+
+    .icon_area > ul > li { 
+        width:48%/*225px*/; height:140px; border-radius:10px; 
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+        margin-right:10px; margin-bottom:10px; background-color: var(--color-white);  }
+
+    .icon_area > ul > li:nth-child(2n) { margin-right:0; margin-bottom:0; }
+
+    .icon_area a { display:block; width: 100%; height: 100%; }
+
+    .icon_area dl { 
+        position: relative;
+        display:flex; flex-direction: row; 
+        width: 100%; height:100%; padding:20px/*15px*/; 
+        box-sizing: border-box }
+
+    .icon_area dl > dt {
+        position: absolute; left:50%; transform: translateX(-50%);
+        width:70px; height:70px;}
+
+    .icon_area dd { 
+        position: absolute; top:100px; left:50%; transform: translateX(-50%);  
+        width:auto; height:auto; font-size:13px; }
+
+    .icon_area dt {
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+        
+    .list_01 dt { background-image: url(../img/icon/icon_01.png);}
+    .list_02 dt { background-image: url(../img/icon/icon_02.png);}
+    .list_03 dt { background-image: url(../img/icon/icon_03.png);}
+    .list_04 dt { background-image: url(../img/icon/icon_04.png);}
+
+
+
+
+    /* conBox */
+    #conBox { height:660px; padding:50px 10px 0; box-sizing: border-box; }
+
+    #conBox > h2 { margin:auto; text-align: center; }
+
+    .intro_wrap { width:100%; height:auto; }
+
+    .korail_img {
+        width:100%; height:250px; 
+        background-image: url(../img/image/con_img.png);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .korail_p { width:100%; height:auto; margin:auto; margin-top:20px;   }
+
+    .korail_p > dl { width: 100%; height: 100%; padding-bottom:45px; box-sizing: border-box; }
+
+    .korail_p > dl > dt { font-size:18px; text-align: center; margin-bottom:8.695vw;  }
+
+    .korail_p  dd { text-align: center; font-size:13px; line-height:24px; }
+
+    .korail_p  dd > span { font-weight:bold;}
+
+    .more_button { 
+        width:110px; height:40px; margin:auto; 
+        line-height:40px; text-align: center; border:1px solid var(--color-black); }
+
+    .more_button > a { display:block; width: 100%; height: 100%; }
+
+
+    /* reservationBox */
+    #reservationBox { 
+        height:220px; padding:20px 10px; box-sizing: border-box;
+        background-image: url(../img/image/business_baground.png);
+        background-repeat:no-repeat;
+        background-size: cover;
+        background-position:70% 50%;
+     }
+
+    .reservation_area {  
+        width:210px; height:100%; 
+        padding:15px 10px; box-sizing: border-box;
+        background-color: rgba(0, 0, 0, 0.5); }
+
+    .reservation_area > h3 {  
+        display:flex; font-style: italic;
+        text-transform: uppercase; color:var(--color-white); width:auto; height:30px; 
+        font-family:var(--font-malgun); font-weight:600; font-size:18px; }
+
+    .reservation_area > h3:before { 
+        display:block; content:" "; width:30px; height:30px; 
+        margin-right:10px;
+        background-image: url(../img/icon/business_title_icon.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size:contain; }
+
+    .reservation_area > p {  
+        font-size:11px; color:var(--color-white); 
+        font-family:var(--font-nanum); margin-bottom:25px; }
+
+    .ticket_reservation,
+    .korail_site  { 
+        width:100%; height:35px; margin-bottom: 5px;
+        border:1px solid var(--color-white); box-sizing: border-box;}
+
+    .ticket_reservation > a,
+    .korail_site > a { 
+        display: flex; justify-content: space-between;
+        width: 100%; height: 100%; 
+        font-weight:600; font-family:var(--font-malgun);
+        padding:7px; box-sizing: border-box;
+        font-size:13px;  }
+
+    .ticket_reservation .next_icon ,
+    .korail_site .next_icon { 
+        width:30px; height:auto; margin-top:5px;
+        background-image: url(../img/icon/korail_site_next_icon.png);
+        background-repeat: no-repeat;
+        background-size:contain;  }
+  
+    #wrap .korail_site > a, 
+    #wrap .ticket_reservation > a {  color:var(--color-white); }
+    
+    /* newsBox */
+    #newsBox { position: relative; height:1500px; padding:60px 10px; box-sizing: border-box; }
+
+    #newsBox > h2 { text-align: center; margin-bottom:60px;  }
+
+    .news_list { 
+        margin:auto;
+        width:300px; height:20px; }
+
+    .news_list > ul { display:flex; width:100%; height:100%; }
+
+    .news_list > ul > li { width:25%; height:100%; border-right:1px solid var(--color-dark_gray); }
+    .news_list > ul > li:last-child { border-right:0; }
+
+    .news_list a { 
+        display:block; 
+        width: 100%; height: 100%; 
+        font-size:13px; text-align: center; line-height:20px; }
+
+    .news_area { width: 100%; height:auto; margin-top:30px;   }
+
+    .news_area > ul { width: 100%; height: 100%; }
+
+    .news_area > ul > li { 
+        position: relative; 
+        width: 100%; height:280px; margin-bottom:20px; }
+
+    .news_area li div { width: 100%; height: 100%; }
+
+    .news_area dl { 
+        position: absolute; bottom: 0; 
+        padding:4vw/*20px*/; box-sizing: border-box; 
+        width: 100%; height:90px; min-width:100px; 
+        background-color: rgba(0, 0, 0, 0.7); }
+
+    .news_area dt { font-size:14px; margin-bottom:20px; color:var(--color-white); }
+    .news_area dd { font-size:14px;  color:var(--color-white); }
+
+    .news_area li div { 
+        background-repeat: no-repeat; }
+
+    .news_img01 { background-image:url(../img/image/news_image_01.png);}
+    .news_img02 { background-image:url(../img/image/news_image_02.png);}
+    .news_img03 { background-image:url(../img/image/news_image_03.png);}
+    .news_img04 { background-image:url(../img/image/news_image_04.png);}
+
+    /* footBox */
+    #footBox { height:250px; } 
+
+    .site { 
+        width: 100%; height:60px; margin:auto; 
+        padding:15px; box-sizing: border-box; 
+        background-color: #bdbebd; } 
+    
+    .site > ul { display:flex; width:100%; height:100%; padding:8px 0; box-sizing: border-box;}
+
+    .site > ul > li { 
+        width:33.333333%; height:100%; border-right:1px solid var(--color-black);
+        font-size:11px; line-height:14px; text-align:center; }
+
+    .site > ul > li:nth-child(1) { width:85px;}
+    .site > ul > li:last-child { border-right:0; }
+
+    .site a { display:block; width: 100%; height: 100%; }
+
+    .site .upper { text-transform: uppercase; }
+
+    .company_info { 
+        width: 100%; height:auto; 
+        padding:20px; box-sizing: border-box;  }
+
+    .foot_logo { 
+        width:100px; height:40px; margin-bottom:10px; 
+        background-image: url(../img/icon/korail_logo_white.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position:50% 50%; }
+ 
+    address p { 
+        width: 100%; height:auto; 
+        font-size:11px; font-family:var(--font-nanum); 
+        font-style:normal; line-height:18px;
+        margin-bottom:10px; color:var(--color-white); }
+
+    address p:nth-child(1) { display:none; }
+
+    address span { margin-right:10xp; }
+}
+
+
+/* design size 940px */
+@media screen and (min-width:481px) and (max-width:1024px) {
+
+    #wrap a { color:#333;}
+
+    /* headBox */
+    #headBox { position: relative; height:90px; padding:10px 42px; box-sizing: border-box; }
+
+    #headBox h1 { 
+        position: absolute; left:50%; z-index: 50; transform: translateX(-50%);
+        width:130px; height:50px;
+        background-image: url(../img/icon/Korail_logo.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size:contain; }
+
+    .align { 
+        display:flex; justify-content: space-between; margin-top:5px;  }
+
+    /* unbBox */
+    .unbBox { text-align: right; font-size:13px; line-height:20px; }
+
+    .unbBox > ul { width: 100%; height: 100%;}
+
+    .unbBox > ul > li { width:auto; height:auto;}
+
+    .unbBox > ul > li:last-child { text-transform: uppercase; }
+
+    .unbBox a { display:block; width: 100%; height: 100%; }
+
+    #headBox .unbBox { order:1;}
+    #headBox .gnbBox { order:2;}
+    
+
+
+    /* gnbBox */
+    .gnbBox_wrap { 
+        width:60px; height:60px; 
+        background-image: url(../img/icon/toggle_btn.jpg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: contain;
+     }
+
+    /* gnbBox 클릭 */
+    .gnbBox {
+        display: none;
+        position: absolute; top:0; left:0; z-index:1000;
+        width:70%; height:550px; background-color: var(--color-white);
+        transition:all 500ms linear; }
+    
+    .gnbBox > .gnb_list { width:100%; height:auto; }
+
+    .gnbBox.action { left:0; }
+
+    .gnb_open_btn { 
+        position: absolute; top:5px; right:5px; z-index:900;
+        width:35px; height:35px; 
+        background-image: url(../img/icon/close.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: contain;
+    }
+    
+    .intro_area { 
+        width:100%; height:150px; 
+        padding:55px 0; box-sizing: border-box; 
+        font-family:'NanumGothic'; text-align: center;
+        font-size:17px; font-weight: 500; 
+        color:var(--color-white); background-color: var(--color-main); }
+
+    .gnbBox li { width:100%; height:auto;  background-color: cornflowerblue; }
+
+    .gnbBox dl { width:100%; height:auto; background-color:var(--color-white); }
+
+    .gnbBox dt { 
+        width: 100%; height:45px; 
+        border-top:1px solid #bdbebd;
+        border-bottom:1px solid #bdbebd;
+        font-weight:600;
+        font-size:14px; font-family:'NanumGothic'; line-height:45px;
+        text-indent:30px; }
+
+    .gnbBox dd { 
+        display:none;
+        width: 100%; height:38px; 
+        font-size:12px; font-family:'Malgun Gothic'; line-height:38px;
+        text-indent:30px; }
+    
+      .gnbBox dd > a { 
+        display:block; 
+        width:100%; height:100%; }
+    
+      .gnbBox dt > a { display:block; width: 100%; height: 100%; }
+
+
+
+    /* adverBox */
+    #adverBox { height:68.085vw /*640px*/; }
+
+     /* adverBox */
+     #adverBox { position: relative; height:76.086vw/*350px*/; }
+     /* indicator */
+     .adver_indicator { 
+         position: absolute; top:20px; left:42px; z-index: 900;
+         width:150px; height:21px; }
+
+     .adver_indicator > ul { display:flex; width: 100%; height: 100%; }
+
+     .adver_indicator li { 
+         overflow: hidden;
+         width:20px; height:20px; margin-right:10px; 
+         background-color: #fff; border-radius:100%; } 
+
+     .adver_indicator a { display:block; width: 100%; height: 100%; }
+
+     .adver_indicator li.action a { background-color:var(--color-main);}
+     
+     .adver_area { 
+         overflow: hidden; 
+         position: relative; width: 100%; height: 100%; 
+         background-color: #ddd; }
+ 
+     .adver_area > ul { position: absolute; width:500%; height:100%; }    
+     .adver_area li { 
+         display:flex; width: 20%; height:100%;
+         background-position: 50% 50%;
+         background-repeat:no-repeat;
+         background-size: contain;
+      }    
+ 
+     /* .adver_img > .adver_01 { background-image: url(../);} */
+     /* .adver_img > .adver_02 { background-image: url(../);} */
+     /* .adver_img > .adver_03 { background-image: url(../);} */
+     /* .adver_img > .adver_04 { background-image: url(../);} */
+     /* .adver_img > .adver_05 { background-image: url(../);} */
+ 
+     .ticket_button { 
+         position: absolute; left:50%; top:50%; 
+         transform: translate(-50%,-50%); 
+         width:250px; height:auto;  text-align: center;
+         font-size:23px; font-family:var(--font-nanum);  font-weight:600; }
+
+
+     /* iconBox */
+     #iconBox { height:470px; padding:90px 10px; box-sizing: border-box;  }
+
+     .icon_area { width: 100%; height:auto;  }
+ 
+     .icon_area > ul { 
+         display:flex; flex-wrap: wrap; justify-content: space-around; 
+         width:100%; max-width: 460px; height:300px; margin:auto; }
+ 
+     .icon_area > ul > li { 
+         width:48%/*225px*/; height:140px; border-radius:10px; 
+         box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+         margin-right:10px; margin-bottom:10px; background-color: var(--color-white);  }
+ 
+     .icon_area > ul > li:nth-child(2n) { margin-right:0; margin-bottom:0; }
+ 
+     .icon_area a { display:block; width: 100%; height: 100%; }
+ 
+     .icon_area dl { 
+         position: relative;
+         display:flex; flex-direction: row; 
+         width: 100%; height:100%; padding:15px; 
+         box-sizing: border-box }
+ 
+     .icon_area dl > dt {
+         position: absolute; left:50%;transform: translateX(-50%);
+         width:80px; height:80px; }
+ 
+     .icon_area dd { 
+         position: absolute; top:100px; left:50%; transform: translateX(-50%); 
+         width:auto; height:auto; font-size:13px; }
+
+     .icon_area dt {
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+        
+    .list_01 dt { background-image: url(../img/icon/icon_01.png);}
+    .list_02 dt { background-image: url(../img/icon/icon_02.png);}
+    .list_03 dt { background-image: url(../img/icon/icon_03.png);}
+    .list_04 dt { background-image: url(../img/icon/icon_04.png);}
+
+
+    /* conBox */
+    #conBox { height:940px; padding:90px 10px 0; box-sizing: border-box;  }
+
+    #conBox > h2 { margin:auto; text-align: center; margin-top:10px; margin-bottom:50px;}
+
+    .intro_wrap { width:100%; height:auto; }
+
+    .korail_img {
+        width:100%; height:270px; margin:auto; 
+        background-image: url(../img/image/con_img.png);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .korail_p { width:100%; height:auto; margin:auto; margin-top:20px;   }
+
+    .korail_p > dl { width: 100%; height: 100%; padding:20px 0 80px; box-sizing: border-box; }
+
+    .korail_p > dl > dt { font-size:22px; text-align: center; margin-bottom:40px;  }
+
+    .korail_p  dd { text-align: center; font-size:15px; line-height:32px; }
+
+    .korail_p  dd > span { font-weight:bold;}
+
+    .more_button { 
+        width:110px; height:40px; 
+        margin:auto; line-height:40px; 
+        text-align: center; border:1px solid var(--color-black);}
+
+    .more_button > a { display:block; width: 100%; height: 100%; }
+
+
+    /* reservationBox */
+    #reservationBox { height:430px; }
+
+    /* reservationBox */
+    #reservationBox { 
+        height:300px; padding:30px 42px; box-sizing: border-box;
+        background-image: url(../img/image/business_baground.png);
+        background-repeat:no-repeat;
+        background-size: cover;
+        background-position:70% 50%; }
+
+    .reservation_area {  
+        width:260px; height:100%; 
+        padding:35px 20px; box-sizing: border-box;
+        background-color: rgba(0, 0, 0, 0.5); }
+
+    .reservation_area > h3 {  
+        display:flex; font-style: italic;
+        text-transform: uppercase; color:var(--color-white); 
+        width:auto; height:30px; margin-bottom:5px;
+        font-family:var(--font-malgun); font-weight:600; font-size:20px; }
+
+    .reservation_area > h3:before { 
+        display:block; content:" "; width:35px; height:35px; 
+        margin-right:10px;
+        background-image: url(../img/icon/business_title_icon.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size:contain; }
+
+    .reservation_area > p {  
+        font-size:13px; color:var(--color-white); 
+        font-family:var(--font-nanum); margin-bottom:30px; }
+
+    .ticket_reservation,
+    .korail_site  { 
+        width:100%; height:40px; margin-bottom: 5px;
+        border:1px solid var(--color-white); box-sizing: border-box;}
+
+    .ticket_reservation > a,
+    .korail_site > a { 
+        display: flex; justify-content: space-between;
+        width: 100%; height: 100%; 
+        font-weight:600; font-family:var(--font-malgun);
+        padding:9px; box-sizing: border-box;
+        font-size:13px;  }
+
+    .ticket_reservation .next_icon ,
+    .korail_site .next_icon { 
+        width:30px; height:auto; margin-top:5px;
+        background-image: url(../img/icon/korail_site_next_icon.png);
+        background-repeat: no-repeat;
+        background-size:contain;  }
+         
+    #wrap .korail_site > a, 
+    #wrap .ticket_reservation > a {  color:var(--color-white); }
+
+
+     /* newsBox */
+     #newsBox { 
+         position: relative; 
+         height:auto; padding:100px 10px;/*90px 160px*/; box-sizing: border-box; }
+
+     #newsBox > h2 { text-align: center; margin-bottom:60px; }
+ 
+     .news_list { width:320px; height:auto;  margin:auto; margin-top:50px; }
+ 
+     .news_list > ul { display:flex; width:100%; height:100%; }
+ 
+     .news_list > ul > li { width:25%; height:100%; border-right:1px solid var(--color-dark_gray); }
+     .news_list > ul > li:last-child { border-right:0; }
+     
+     .news_list a { 
+         display:block; 
+         width: 100%; height: 100%;  padding:0 6px; box-sizing: border-box;
+         font-size:13px; text-align: center; line-height:20px; }
+ 
+     .news_area { width:100%; max-width:550px; height:auto; margin:auto; margin-top:25px;   }
+ 
+     .news_area > ul { width: 100%; height: 100%; }
+ 
+     .news_area > ul > li { 
+         position: relative; 
+         width: 100%; height:320px; margin-bottom:20px; }
+ 
+     .news_area li div { width: 100%; height: 100%; }
+ 
+     .news_area dl { 
+         position: absolute; bottom: 0; 
+         padding:15px; box-sizing: border-box; 
+         width: 100%; height:90px; min-width:100px; 
+         background-color: rgba(0, 0, 0, 0.7); }
+ 
+     .news_area dt { font-size:14px; margin-bottom:20px; color:var(--color-white); }
+     .news_area dd { font-size:14px;  color:var(--color-white); }
+ 
+     .news_area li div { 
+         background-repeat: no-repeat; }
+ 
+     .news_img01 { background-image:url(../img/image/news_image_01.png);}
+     .news_img02 { background-image:url(../img/image/news_image_02.png);}
+     .news_img03 { background-image:url(../img/image/news_image_03.png);}
+     .news_img04 { background-image:url(../img/image/news_image_04.png);}
+
+    /* footBox */
+    #footBox { height:400px; } 
+
+    .site { 
+        width: 100%; height:60px;
+        padding:15px 42px; box-sizing: border-box; 
+        background-color: #bdbebd; } 
+    
+    .site > ul { display:flex; width:100%; height:100%; padding:8px 0; box-sizing: border-box;}
+
+    .site > ul > li { 
+        width:130px; height:100%; border-right:1px solid var(--color-black); 
+        font-size:13px; line-height:14px; text-align:center; }
+
+    .site > ul > li:nth-child(1) {  width:90px; text-align:left; }
+    .site > ul > li:last-child {  border-right:0; }
+
+    .site a { display:block; width: 100%; height: 100%; }
+
+    .site .upper { text-transform: uppercase; }
+
+    .company_info { 
+        width: 100%; height:auto; 
+        padding:42px; box-sizing: border-box;  }
+
+    .foot_logo { 
+        width:150px; height:70px; margin-bottom:15px; 
+        background-image: url(../img/icon/korail_logo_white.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position:50% 50%; }
+ 
+    address p { 
+        width: 100%; height:auto; 
+        font-size:13px; font-family:var(--font-nanum); 
+        font-style:normal; line-height:18px;
+        margin-bottom:10px; color:var(--color-white); }
+
+    address span { margin-right:15px; }
+
+    .foot_wrap { width: 100%; background-color: var(--color-gray);}
+    
+}
+
+
+/* design size 1420px */
+@media screen and (min-width:1025px) {
+
+    .headBox_wrap { width: 100%; height:auto; background-color: var(--color-white); }
+
+    #headBox { position: relative; width:1440px; height:auto; }
+    
+    #headBox h1 { 
+        position: absolute; top:60px; left:10px; 
+        width:220px; height:75px; 
+        background-image: url(../img/icon/Korail_logo.png);
+        background-repeat: no-repeat;
+        background-position:50% 50%;
+        background-size: contain;
+     }
+
+    .align { width:100%; }
+
+    /* unbBox */
+    .unbBox { 
+        position: relative; 
+        width:1440px; height:50px; 
+        padding:10px; box-sizing: border-box;
+        border-bottom:1px solid #a9a9a9;
+        margin:auto; background-color: var(--color-white); } 
+
+    /* .unbBox:before { display:block; content:" "; width: 100%; height:100%; background-color: var(--color-white);} */
+
+    
+    .unbBox > ul { 
+        display:flex; 
+        position: absolute; right:10px;
+        width:auto; height:30px; }
+
+    .unbBox > ul > li { margin-right:20px; line-height:30px; }
+
+    .unbBox a { 
+        display:block; 
+        padding:0 10px; text-align: center;
+        width: 100%; height: 100%;
+        font-size:14px; font-family:var(--font-nanum); color:var(--color-black);}
+    
+
+    /* gnbBox */    
+    .gnbBox_wrap { width: 100%; height:auto; }
+
+    .gnbBox { 
+        width:1440px; height:95px; margin:auto;
+        padding:10px; box-sizing: border-box; background-color: var(--color-white);}
+
+    .gnb_open_btn { display:none; }
+    .intro_area { display:none; }
+    
+    .gnbBox > ul { 
+        position: absolute; top:60px; right:10px; margin-top:13px;
+        display:flex; width:1000px; height:auto; background-color: darkmagenta; }
+
+    .gnbBox > ul > li { 
+        width:16.666vw; height:100%; 
+        margin-right:30px; font-size:20px;
+        background-color: darkorange;  }
+    .gnbBox > ul > li:last-child { margin-right:0; }
+
+    .gnb_list dl { width: 100%; height:auto; }
+
+    .gnb_list dt { 
+        position: relative; width:100%; height:50px; font-size:20px; 
+        color:var(--color-white); text-align: center; 
+        line-height:50px; font-family:var(--font-malgun); }
+
+    .gnb_list dd { 
+        width:100%; height:auto; text-align: center; font-size:18px;
+        padding:15px 0; background-color: lightcoral; }
+        
+    .gnb_list dt a { 
+        display:block; width: 100%; height: 100%; }
+  
+    /* adverBox */
+    #adverBox { 
+        position: relative; 
+        width:1440px; height:860px; }
+
+    /* indicator */
+    .adver_indicator { 
+        position: absolute; top:30px; left:30px; z-index:700;
+        width:200px; height:25px; }
+
+    .adver_indicator > ul { display:flex; justify-content: space-between; width: 100%; height: 100%; }
+
+    .adver_indicator > ul > li { 
+        width:25px; height:25px; border-radius:100%;
+        overflow: hidden; 
+        background-color: var(--color-white); }
+
+    .adver_indicator > ul > li { margin-right:0; }
+    
+    .adver_indicator a { display:block; width:100%; height:100%; }
+
+    /* adver_area */
+    .adver_area { 
+        position: relative; width: 100%; height:100%; overflow: hidden; }
+
+    .adver_area > ul { display:flex; position: absolute; width: 500%; height:100%; }
+
+    .adver_area > ul > li { 
+        width:20%; height:100%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size:cover; }
+    
+    .adver_01 { background-image: url(../img/image/adver_img_01.jpg);}
+    .adver_02 { background-image: url(../img/image/adver_img_02.jpg);}
+    .adver_03 { background-image: url(../img/image/adver_img_03.jpg);}
+    .adver_04 { background-image: url(../img/image/adver_img_04.jpg);}
+    .adver_05 { background-image: url(../img/image/adver_img_05.jpg);}
+    
+    .adver_indicator li.action a { background-color:var(--color-main);}
+
+    .adver_btn { 
+        display:flex;
+        position: absolute; left:50%; top:400px; transform: translateX(-50%);
+        width:auto; height:auto; }
+
+    .ticket_button { 
+        width:auto; height:auto; margin-right:15px;
+        font-family: var(--font-malgun);
+        font-weight:bold;  font-size:50px; color:var(--color-white); }
+
+    .ticket_button a { display:block; width: 100%; height: 100%; }
+
+    .click { 
+        width:100px; height:auto;
+        background-image: url(../img/icon/korail_site_next_icon.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: contain;
+        
+        
+        }
+
+
+    /* iconBox */
+    #iconBox { position: relative; width:1440px; height:300px; }
+
+    .icon_wrap { background-color:#f6f8ff;}
+
+    .icon_area { 
+        position: absolute; top:-100px; left:50%; transform: translateX(-50%);
+        width:1000px; height:280px; }
+
+    .icon_area > ul { display:flex; justify-content: space-between; width: 100%; height: 100%; }
+
+    .icon_area > ul > li { 
+        width:220px; height:100%; 
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+        border-radius:10px; background-color: var(--color-white); }
+
+    .icon_area a { display:block; width: 100%; height: 100%; }
+
+    .icon_area dl { 
+        position: relative;
+        width: 100%; height: 100%; padding:50px; box-sizing: border-box; }
+
+    .icon_area dd { 
+        position: absolute; left:50%; bottom:50px; transform: translateX(-50%);
+        width:200px; height:auto; text-align: center; font-size:20px; }
+
+    .icon_area dt {
+        position: absolute; left:50%; transform: translateX(-50%);
+        width:120px; height:120px; 
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+        
+    .list_01 dt { background-image: url(../img/icon/icon_01.png);}
+    .list_02 dt { background-image: url(../img/icon/icon_02.png);}
+    .list_03 dt { background-image: url(../img/icon/icon_03.png);}
+    .list_04 dt { background-image: url(../img/icon/icon_04.png);}
+
+
+
+    /* conBox */
+    #conBox { width:1440px; height:1150px;  padding:120px 10px 0; box-sizing: border-box;}
+
+    #conBox > h2 { font-size:40px; text-align: center; margin-bottom:110px; }
+
+    .intro_wrap { 
+        display:flex; justify-content: space-between; 
+        width:90%; height:auto; margin:auto; margin-bottom: 120px; }
+
+    .korail_img { 
+        order:2; width:650px; height:500px;
+        background-image: url(../img/image/con_img.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 10% 50%;
+    }
+
+    .korail_p { 
+        width:600px; height:auto; 
+        padding:40px; box-sizing: border-box; }
+
+    .korail_p > dl { width:100%; height:auto;}
+
+    .korail_p dt { 
+        font-size:30px; margin-top:150px;
+        margin-bottom:55px; font-family:var(--font-malgun);  }
+
+    .korail_p dd { font-size:22px; line-height: 40px;}
+
+    .korail_p span { font-weight: bold; }
+
+    .more_button { 
+        width:180px; height:60px; margin:auto; 
+        font-size:20px; text-align: center; 
+        line-height: 60px; border:1px solid var(--color-black); }
+
+    .more_button > a { display:block; width: 100%; height: 100%; }
+
+
+
+    /* reservationBox */
+    #reservationBox {
+        width:1440px; height:550px; 
+        padding:60px 30px; box-sizing: border-box;
+        background-image: url(../img/image/business_baground.png);
+        background-size: cover; }
+
+    .reservation_area { 
+        width:410px; height:410px; 
+        padding:80px 40px; box-sizing: border-box;
+        background-color: rgba(0, 0, 0, 0.5); }
+   
+    .reservation_area > h3 {  
+        display:flex; font-style: italic;
+        text-transform: uppercase; color:var(--color-white); 
+        width:auto; height:30px; margin-bottom:20px;
+        font-family:var(--font-malgun); font-weight:600; font-size:30px; }
+
+    .reservation_area > h3:before { 
+        display:block; content:" "; width:50px; height:50px; 
+        margin-right:10px;
+        background-image: url(../img/icon/business_title_icon.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size:contain; }
+
+    .reservation_area > p {  
+        font-size:18px; color:var(--color-white); 
+        font-family:var(--font-nanum); margin-bottom:60px; }
+
+    .ticket_reservation,
+    .korail_site  { 
+        width:100%; height:50px; margin-bottom:15px;
+        border:1px solid var(--color-white); box-sizing: border-box;}
+
+    .ticket_reservation > a,
+    .korail_site > a { 
+        display: flex; justify-content: space-between;
+        width: 100%; height: 100%; font-size:18px;
+        font-weight:600; font-family:var(--font-malgun);
+        padding:10px 20px; box-sizing: border-box;  }
+
+    .next_icon ,
+    .next_icon { 
+        width:50px; height:auto; margin-top:5px;
+        background-image: url(../img/icon/korail_site_next_icon.png);
+        background-repeat: no-repeat;
+        background-size:contain;  }
+         
+    #wrap .korail_site > a, 
+    #wrap .ticket_reservation > a {  color:var(--color-white); }
+
+
+    /* newsBox */
+    #newsBox { width:1440px; height:1600px; padding:220px 10px; box-sizing: border-box; }
+
+    #newsBox > h2 { font-size:40px; text-align: center; margin-bottom:110px; }
+
+    .news_list { width:550px; height:35px; margin:auto; margin-bottom:30px; }
+
+    .news_list > ul { display:flex; justify-content: space-between; width: 100%; height: 100%; }
+
+    .news_list > ul > li { 
+        width:25%; height:100%;;
+        font-size:20px; line-height:35px; 
+        border-right:1px solid var(--color-black); }
+
+    .news_list > ul > li:last-child { border-right:0; }
+
+    .news_list a { 
+        display:block; width: 100%; height: 100%; 
+        text-align: center; padding:0 20px; box-sizing: border-box;}
+
+    .news_area { width:100%; height:auto; }
+
+    .news_area > ul { 
+        display:flex; flex-wrap: wrap; justify-content: space-between;  
+        width: 100%; height:100%; }
+
+    .news_area > ul > li { 
+        position: relative; 
+        width:685px; height:405px; 
+        margin-bottom:45px; background-color: slategray; }
+
+    .news_area > ul > li:nth-child(3),
+    .news_area > ul > li:nth-child(4) { margin-bottom:0; }
+
+    .news_area div {  
+        width: 100%; height: 100%;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+     }
+
+    .news_img01 { background-image: url(../img/image/news_image_01.png);}
+    .news_img02 { background-image: url(../img/image/news_image_02.png);}
+    .news_img03 { background-image: url(../img/image/news_image_03.png);}
+    .news_img04 { background-image: url(../img/image/news_image_04.png);}
+
+
+
+    .news_area dl { 
+        position: absolute; bottom: 0; 
+        width: 100%; height:115px; padding:20px; box-sizing: border-box;
+        background-color: rgba(0, 0, 0, 0.5); }
+
+    .news_area dt, 
+    .news_area dd { font-size:21px; color:var(--color-white); }
+
+    .news_area dt { margin-bottom:15px; }
+
+
+    /* footBox */
+    #footBox { width:1440px; height:550px; }
+
+    .site { 
+        width: 100%; height:90px; 
+        padding:30px 10px; box-sizing: border-box; }
+
+    .site > ul { display:flex; width:70%; height:100%; }
+
+    .site > ul > li { 
+        width:auto; height:100%; 
+        font-size:20px; line-height: 30px; color:var(--color-white);
+        border-right:1px solid var(--color-white); }
+
+    .site > ul > li:first-child { padding-right:30px; box-sizing: border-box; }
+    .site > ul > li:last-child { border-right:0; }
+
+    .site a { 
+        display:block; width: 100%; height: 100%; 
+        padding:0 30px; box-sizing: border-box; }
+
+    .site .upper { text-transform: uppercase;}
+
+    .company_info { display:flex; width: 100%; height:auto; padding:100px 10px; box-sizing: border-box; }
+    .foot_logo { 
+        width:200px; height:80px; margin-top:30px;
+        background-image: url(../img/icon/korail_logo_white.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: contain;
+     }
+    address { margin-left:50px; }
+    address > p { font-size:20px; font-style: normal; line-height: 28px; color:var(--color-white); }
+    address > p:first-child { margin-bottom:20px; }
+    address > p:nth-child(2) { margin-bottom:20px; }
+    address span { margin-right:20px; }
+
+    .foot_wrap { width: 100%; background-color: var(--color-gray);}
+
+    
+
+    
+}
