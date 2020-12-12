@@ -233,10 +233,32 @@ h2 > span { color:var(--color-main);}
     .korail_p  dd > span { font-weight:bold;}
 
     .more_button { 
+        overflow: hidden;
         width:110px; height:40px; margin:auto; 
+        transition:all 0.5s;
         line-height:40px; text-align: center; border:1px solid var(--color-black); }
 
     .more_button > a { display:block; width: 100%; height: 100%; }
+
+    #wrap .more_button a:hover,
+    #wrap .more_button a:active { color:var(--color-white); }
+
+    .more_button a:before { 
+        position: absolute; content:" "; z-index:-1; 
+        left:50%; top:50%; transform: translate(-50%, -50%) rotate(45deg); 
+        width:200%; height:0;
+        background-color: var(--color-main); transition: all 1s;
+     }
+
+    .more_button a:hover:before { height:300%; }
+
+    
+
+
+     
+
+
+
 
 
     /* reservationBox */
@@ -292,7 +314,20 @@ h2 > span { color:var(--color-main);}
   
     #wrap .korail_site > a, 
     #wrap .ticket_reservation > a {  color:var(--color-white); }
-    
+
+     /* ticket_reservation:hover */
+     .ticket_reservation span:nth-child(1):after,
+     .korail_site span:nth-child(1):after { 
+         display: block;
+         content:" "; border-bottom:1px solid var(--color-white);
+         transform:scaleX(0);
+         transition: transform 250ms ease-in-out;
+     }
+     .ticket_reservation span:nth-child(1):hover:after, 
+     .korail_site span:nth-child(1):hover:after { transform:scaleX(1); }
+
+
+  
     /* newsBox */
     #newsBox { position: relative; height:1500px; padding:60px 10px; box-sizing: border-box; }
 
@@ -597,13 +632,27 @@ h2 > span { color:var(--color-main);}
     .korail_p  dd > span { font-weight:bold;}
 
     .more_button { 
+        overflow: hidden;
         width:110px; height:40px; 
-        margin:auto; line-height:40px; 
+        margin:auto; line-height:40px; transition:all 0.5s;
         text-align: center; border:1px solid var(--color-black);}
+
 
     .more_button > a { display:block; width: 100%; height: 100%; }
 
+    #wrap .more_button a:hover,
+    #wrap .more_button a:active { color:var(--color-white); }
 
+    .more_button a:before { 
+        position: absolute; content:" "; z-index:-1; 
+        left:50%; top:50%; transform: translate(-50%, -50%) rotate(45deg); 
+        width:200%; height:0;
+        background-color: var(--color-main); transition: all 1s; }
+
+    .more_button a:hover:before { height:300%; }
+
+
+    
     /* reservationBox */
     #reservationBox { height:430px; }
 
@@ -660,6 +709,17 @@ h2 > span { color:var(--color-main);}
          
     #wrap .korail_site > a, 
     #wrap .ticket_reservation > a {  color:var(--color-white); }
+
+     /* ticket_reservation:hover */
+     .ticket_reservation span:nth-child(1):after,
+     .korail_site span:nth-child(1):after { 
+         display: block;
+         content:" "; border-bottom:1px solid var(--color-white);
+         transform:scaleX(0);
+         transition: transform 250ms ease-in-out;
+     }
+     .ticket_reservation span:nth-child(1):hover:after, 
+     .korail_site span:nth-child(1):hover:after { transform:scaleX(1); }
 
 
      /* newsBox */
@@ -967,12 +1027,24 @@ h2 > span { color:var(--color-main);}
     .korail_p span { font-weight: bold; }
 
     .more_button { 
+        overflow: hidden;
         width:180px; height:60px; margin:auto; 
         font-size:20px; text-align: center; 
-        line-height: 60px; border:1px solid var(--color-black); }
+        transition:all 0.5s;
+        line-height: 60px;  border:1px solid var(--color-black); }
 
     .more_button > a { display:block; width: 100%; height: 100%; }
 
+    .more_button a:hover,
+    .more_button a:active { color:var(--color-white); }
+
+    .more_button a:before { 
+        position: absolute; content:" "; z-index:-1; 
+        left:50%; top:50%; transform: translate(-50%, -50%) rotate(45deg); 
+        width:200%; height:0; 
+        background-color: var(--color-main); transition: all 1s; }
+
+    .more_button a:hover:before { height:300%; }
 
 
     /* reservationBox */
@@ -1027,6 +1099,20 @@ h2 > span { color:var(--color-main);}
     #wrap .korail_site > a, 
     #wrap .ticket_reservation > a {  color:var(--color-white); }
 
+    /* ticket_reservation:hover */
+    .ticket_reservation span:nth-child(1):after,
+    .korail_site span:nth-child(1):after { 
+        display: block;
+        content:" "; border-bottom:1px solid var(--color-white);
+        transform:scaleX(0);
+        transition: transform 250ms ease-in-out;
+    }
+    .ticket_reservation span:nth-child(1):hover:after, 
+    .korail_site span:nth-child(1):hover:after { transform:scaleX(1); }
+
+
+
+
 
     /* newsBox */
     #newsBox { width:1440px; height:1600px; padding:220px 10px; box-sizing: border-box; }
@@ -1066,15 +1152,12 @@ h2 > span { color:var(--color-main);}
         width: 100%; height: 100%;
         background-position: 50% 50%;
         background-repeat: no-repeat;
-        background-size: cover;
-     }
+        background-size: cover; }
 
     .news_img01 { background-image: url(../img/image/news_image_01.png);}
     .news_img02 { background-image: url(../img/image/news_image_02.png);}
     .news_img03 { background-image: url(../img/image/news_image_03.png);}
     .news_img04 { background-image: url(../img/image/news_image_04.png);}
-
-
 
     .news_area dl { 
         position: absolute; bottom: 0; 
