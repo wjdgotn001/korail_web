@@ -80,7 +80,7 @@ var headBoxWrap = $('.headBox_wrap');
 
 // 브라우저 상단에서 떨어져 있는 거리 체크
 var gnbOffset = gnbBox.offset().top;
-console.log('offset:',gnbOffset);
+// console.log('offset:',gnbOffset);
 
 win.on('scroll',function(e){
 
@@ -92,20 +92,31 @@ win.on('scroll',function(e){
   }else{
     headBoxWrap.removeAttr('style');
   }
-
-
-
-
-
-
-
-
 });
 
+// unbBox
+var unbBox = $('.unbBox');
+var unbBoxLan = unbBox.find('.lan');
+var unbDt = unbBoxLan.find('dt');
+var unbDd = unbBoxLan.find('dd');
+var unbbtn = unbDt.children('button');
+var unbDdbtnLink = unbDd.children('a');
+
+unbDd.hide();
+var unbSlideDown = function(){
+  unbDd.stop().slideDown();
+};
+var unbSlideUp = function(){
+  unbDd.stop().slideUp();
+};
+
+unbBoxLan.on({
+  'mouseenter':unbSlideDown,
+  'mouseleave':unbSlideUp
+});
+unbbtn.on('focus',unbSlideDown);
+unbDdbtnLink.eq(-1).on('blur',unbSlideUp);
 
 
 
-
-
- 
 })(jQuery);

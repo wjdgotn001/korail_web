@@ -44,7 +44,7 @@
               <ul>
                   <li><a href="#">로그인</a></li>
                   <li><a href="#">통합회원가입</a></li>
-                  <li>
+                  <li class="lan">
                       <!-- <a href="#">english</a> -->
                       <dl>
                           <dt aria-label="현재 페이지는 한국어로 설정되어 있습니다.">
@@ -75,66 +75,6 @@
                       <span>대한민국의 내일 <br> 국민의 코레일</span>
                   </div>
                   <ul class="gnb_list">
-                      <!-- <li>
-                          <dl>
-                              <dt><a href="#">정보공개</a></dt>
-                              <dd>
-                                <a href="#">사전정보공표</a>
-                                <a href="#">정보목록</a>
-                              </dd>
-                          </dl>
-                      </li>
-                      <li>
-                        <dl>
-                            <dt><a href="#">사업분야</a></dt>
-                            <dd>
-                              <a href="#">여객사업</a>
-                              <a href="#">광역철도사업</a>
-                              <a href="#">종합물류사업</a>
-                              <a href="#">자산개발사업</a>
-                            </dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt><a href="#">열린경영</a></dt>
-                            <dd>
-                              <a href="#">지속가능경영</a>
-                              <a href="#">철도안전</a>
-                              <a href="#">윤리경영</a>
-                            </dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt><a href="#">사이버홍보실</a></dt>
-                            <dd>
-                              <a href="#">보도자료</a>
-                              <a href="#">코레일sns</a>
-                              <a href="#">공지사항</a>
-                            </dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt><a href="#">고객지원</a></dt>
-                            <dd>
-                              <a href="#">고객의소리</a>
-                              <a href="#">고객서비스헌장</a>
-                            </dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt><a href="#">코레일소개</a></dt>
-                            <dd>
-                              <a href="#">계열사</a>
-                              <a href="#">채용정보</a>
-                              <a href="#">경영공시</a>
-                              <a href="#">철도명예의전당</a>
-                           </dd>
-                        </dl>
-                    </li> -->
                   </ul>
               </div> <!--gnbBox-->
           </nav> 
@@ -166,8 +106,9 @@
           </div>
 
           <div class="adver_btn">
+            <div class="adver_title"><span>g</span>o to ticket reservation</div>
             <div class="ticket_button"><a href="#">승차권예매 바로가기</a></div>
-            <div class="click"><span class="hidden_context">클릭</span></div>
+            <div class="click"><button type="button"><span class="hidden_context">클릭</span></button></div>
           </div>
       </section><!--adverBox-->
 
@@ -331,6 +272,7 @@
 
   <script src="../js/src/headBox_pc.js"></script>
   <script src="../js/src/adverBox.js"></script>
+  <script src="../js/src/conBox.js"></script>
 
   <script>
     var headBoxWrap  = $('.headBox_wrap');
@@ -338,7 +280,7 @@
     var headContent = headBox.contents();
     var winW = $(window).outerWidth();
 
-    if(winW <= 500){
+    if(winW <= 1024){
       headBox.append('<div class="align"></div>');
       $('.align').append(headContent);
 

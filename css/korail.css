@@ -16,8 +16,6 @@ h2 > span { color:var(--color-main);}
 #footBox { width:100%; margin:auto; background-color:var(--color-gray);}
 
 
-
-
 /* design size 460px */
 @media screen and (max-width:480px) {
 
@@ -110,10 +108,7 @@ h2 > span { color:var(--color-main);}
         width:100%; height:100%; }
     
       .gnbBox dt > a { 
-          display:block; width: 100%; height: 100%;
-        
-         
-         }
+          display:block; width: 100%; height: 100%; }
 
       
     /* adverBox */
@@ -137,29 +132,41 @@ h2 > span { color:var(--color-main);}
     
     .adver_area { 
         overflow: hidden; 
-        position: relative; width: 100%; height: 100%; 
-        background-color: #ddd; }
+        position: relative; width: 100%; height: 100%; }
 
-    .adver_area > ul { position: absolute; width:500%; height:100%; }    
+    .adver_area > ul { display:flex; position: absolute; width:500%; height:100%; }    
     .adver_area li { 
-        display:flex; width: 20%; height:100%;
+        width: 20%; height:100%;
         background-position: 50% 50%;
         background-repeat:no-repeat;
+        background-size:cover; }    
+
+    .adver_img > .adver_01 { background-image: url(../img/image/adver_img_01.jpg);}
+    .adver_img > .adver_02 { background-image: url(../img/image/adver_img_02.jpg);}
+    .adver_img > .adver_03 { background-image: url(../img/image/adver_img_03.jpg);}
+    .adver_img > .adver_04 { background-image: url(../img/image/adver_img_04.png);}
+    .adver_img > .adver_05 { background-image: url(../img/image/adver_img_05.jpg);}
+
+    .adver_btn { 
+         position: absolute; left:50%; top:50%; transform: translate(-50%, -50%);
+         width:190px; height:70px; }
+    .adver_title { width:auto; height:auto; color: var(--color-white); font-size:13px; margin-bottom:5px; }
+    .adver_title > span { text-transform: uppercase; }
+    
+    .ticket_button {  
+        width:100%; height:auto; 
+        text-align: center; font-size:20px; 
+        font-family:var(--font-malgun); font-weight:600; }
+
+    #wrap .ticket_button > a { display:block; width: 100%; height: 100%; color:var(--color-white);  }
+
+    .click { 
+        position: absolute; right:0; width:30px; height:20px;
+        background-image: url(../img/icon/korail_site_next_icon.png); 
+        background-repeat: no-repeat;
         background-size: contain;
-     }    
-
-    /* .adver_img > .adver_01 { background-image: url(../);} */
-    /* .adver_img > .adver_02 { background-image: url(../);} */
-    /* .adver_img > .adver_03 { background-image: url(../);} */
-    /* .adver_img > .adver_04 { background-image: url(../);} */
-    /* .adver_img > .adver_05 { background-image: url(../);} */
-
-    .ticket_button { 
-        position: absolute; left:50%; top:50%; 
-        transform: translate(-50%,-50%); 
-        width:200px; height:auto;  text-align: center;
-        font-size:20px; font-family:var(--font-nanum);  font-weight:600; }
-
+        background-position: 50% 50%; }
+    .click > button { width:100%; height:100%; }
 
     /* iconBox */
     #iconBox { height:480px; padding:90px 10px; box-sizing: border-box;  }
@@ -175,7 +182,10 @@ h2 > span { color:var(--color-main);}
         box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
         margin-right:2.1739vw/*10px*/; margin-bottom:10px; background-color: var(--color-white);  }
 
+
     .icon_area > ul > li:nth-child(2n) { margin-right:0; margin-bottom:0; }
+
+    .icon_area li:hover { transform: translateY(-10px); transition:all 500ms ease;}
 
     .icon_area a { display:block; width: 100%; height: 100%; }
 
@@ -215,7 +225,7 @@ h2 > span { color:var(--color-main);}
     .intro_wrap { width:100%; height:auto; }
 
     .korail_img {
-        width:100%; height:180px; 
+        width:100%; height:180px; margin-top:40px;
         background-image: url(../img/image/con_img.png);
         background-position: 50% 50%;
         background-repeat: no-repeat;
@@ -241,7 +251,7 @@ h2 > span { color:var(--color-main);}
     .more_button > a { position: relative; display:block; width: 100%; height: 100%; transition: all 200ms linear;  }
 
     #wrap .more_button a:hover,
-    #wrap .more_button a:active { color:var(--color-white); }
+    #wrap .more_button a:focus { color:var(--color-white); }
 
     .more_button a:before { 
         content:" "; display: block; z-index:-1;
@@ -447,7 +457,23 @@ h2 > span { color:var(--color-main);}
 
     #headBox .unbBox { order:1;}
     #headBox .gnbBox { order:2;}
-    
+
+    .lan > dl { width:100%; height:auto; min-height:100px; }
+
+    .lan > dl > dt { position: relative; width:100%; height:100%; }
+
+    .lan > dl > dd { 
+        position: absolute; top:80px; right:42px; z-index:900; 
+        width:20%; height:auto; min-height:95px; 
+        padding:0 5px; box-sizing: border-box; 
+        background-color:var(--color-white); border:1px solid var(--color-black); }
+
+    .lan button  { width:100%; height:100%;  text-align: right;  }
+
+    .lan a { 
+        display:block; width:100%; height:30px; 
+        line-height:30px; border-bottom:1px solid var(--color-black); }
+    .lan a:last-child { border:0; }
 
 
     /* gnbBox */
@@ -535,32 +561,50 @@ h2 > span { color:var(--color-main);}
      
      .adver_area { 
          overflow: hidden; 
-         position: relative; width: 100%; height: 100%; 
-         background-color: #ddd; }
+         position: relative; width: 100%; height: 100%; }
  
-     .adver_area > ul { position: absolute; width:500%; height:100%; }    
+     .adver_area > ul { position: absolute; display:flex;  width:500%; height:100%; }    
      .adver_area li { 
-         display:flex; width: 20%; height:100%;
+         width: 20%; height:100%;
          background-position: 50% 50%;
          background-repeat:no-repeat;
-         background-size: contain;
-      }    
+         background-size:cover; }    
  
-     /* .adver_img > .adver_01 { background-image: url(../);} */
-     /* .adver_img > .adver_02 { background-image: url(../);} */
-     /* .adver_img > .adver_03 { background-image: url(../);} */
-     /* .adver_img > .adver_04 { background-image: url(../);} */
-     /* .adver_img > .adver_05 { background-image: url(../);} */
+     .adver_img > .adver_01 { background-image: url(../img/image/adver_img_01.jpg);}
+     .adver_img > .adver_02 { background-image: url(../img/image/adver_img_02.jpg);}
+     .adver_img > .adver_03 { background-image: url(../img/image/adver_img_03.jpg);}
+     .adver_img > .adver_04 { background-image: url(../img/image/adver_img_04.png);}
+     .adver_img > .adver_05 { background-image: url(../img/image/adver_img_05.jpg);}
  
-     .ticket_button { 
-         position: absolute; left:50%; top:50%; 
-         transform: translate(-50%,-50%); 
-         width:250px; height:auto;  text-align: center;
-         font-size:23px; font-family:var(--font-nanum);  font-weight:600; }
+    .adver_btn { 
+        position: absolute; left:50%; top:50%; transform: translate(-50%, -50%);
+        width:330px; height:150px; }
 
+    .adver_title { 
+        position: absolute; left:50%; transform: translateX(-50%); 
+        width: 100%; height:auto; color: var(--color-white); 
+        text-shadow:2px 2px 2px rgba(0, 0, 0, 0.7); font-size:18px; }
+
+    .adver_title > span { text-transform: uppercase;}    
+
+    .ticket_button { 
+        width:100%; height:auto; 
+        text-shadow: 3px 2px 6px rgba(0, 0, 0, 0.7); margin-top:20px;
+        font-size:35px; font-family:var(--font-malgun);  font-weight:600;  }
+
+    #wrap .ticket_button a { display:block; width: 100%; height: 100%; color:var(--color-white); }
+
+    .click { 
+        position: absolute; top:60px; right:0;
+        width:70px; height:30px; margin-top:5px;
+        background-image: url(../img/icon/korail_site_next_icon.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: contain; }
+    .click > button { width: 100%; height: 100%; }
 
      /* iconBox */
-     #iconBox { height:470px; padding:90px 10px; box-sizing: border-box;  }
+     #iconBox { height:470px; padding:90px 42px; box-sizing: border-box;  }
 
      .icon_area { width: 100%; height:auto;  }
  
@@ -574,14 +618,17 @@ h2 > span { color:var(--color-main);}
          margin-right:10px; margin-bottom:10px; background-color: var(--color-white);  }
  
      .icon_area > ul > li:nth-child(2n) { margin-right:0; margin-bottom:0; }
+
+    .icon_area li:hover,
+    .icon_area li:focus { transform: translateY(-10px); transition: all 300ms linear; }
  
      .icon_area a { display:block; width: 100%; height: 100%; }
  
      .icon_area dl { 
          position: relative;
-         display:flex; flex-direction: row; 
          width: 100%; height:100%; padding:15px; 
          box-sizing: border-box }
+
  
      .icon_area dl > dt {
          position: absolute; left:50%;transform: translateX(-50%);
@@ -604,21 +651,27 @@ h2 > span { color:var(--color-main);}
 
 
     /* conBox */
-    #conBox { height:940px; padding:90px 10px 0; box-sizing: border-box;  }
+    #conBox { height:940px; padding:90px 42px 0; box-sizing: border-box;  }
 
     #conBox > h2 { margin:auto; text-align: center; margin-top:10px; margin-bottom:50px;}
 
     .intro_wrap { width:100%; height:auto; }
 
     .korail_img {
+        opacity: 0; transform: translateY(-50px); transition: all 700ms linear;
         width:100%; height:270px; margin:auto; 
         background-image: url(../img/image/con_img.png);
         background-position: 50% 50%;
         background-repeat: no-repeat;
-        background-size: contain;
-    }
+        background-size: contain; }
+    .korail_img.action { opacity: 1; transform: translateY(0);}
+    
 
-    .korail_p { width:100%; height:auto; margin:auto; margin-top:20px;   }
+    .korail_p { 
+        opacity: 0; transform: translateX(-200px); transition: all 1000ms linear 500ms;
+        width:100%; height:auto; margin:auto; margin-top:20px; }
+
+    .korail_p.action { opacity: 1; transform: translateX(0);}
 
     .korail_p > dl { width: 100%; height: 100%; padding:20px 0 80px; box-sizing: border-box; }
 
@@ -632,18 +685,17 @@ h2 > span { color:var(--color-main);}
         overflow: hidden;
         width:110px; height:40px; margin:auto; 
         font-size:15px; text-align: center;
-        line-height:40px; transition:all 0.5s;
+        line-height:40px; 
         border:1px solid var(--color-black);}
 
-    .more_button > a { position: relative; display:block; width: 100%; height: 100%; transition: all 200ms linear; }
+    .more_button > a { position: relative; display:block; width: 100%; height: 100%; }
 
-    .more_button a:hover,
-    .more_button a:active { color:var(--color-white); }
+    #wrap .more_button a:hover,
+    .more_button a:focus { color:var(--color-white); }
     .more_button a:before { 
          content:" "; display: block; z-index:-1;
          position: absolute; top:50%; left:50%; transform:translate(-50%, -50%) rotate(45deg) ;
-         width:120%; height:0; 
-        background-color: var(--color-main); transition: all 1s; }
+         width:120%; height:0; background-color: var(--color-main); transition: all 1s; }
 
     .more_button a:hover:before { height:300%; } 
  
@@ -719,7 +771,7 @@ h2 > span { color:var(--color-main);}
      /* newsBox */
      #newsBox { 
          position: relative; 
-         height:auto; padding:100px 10px;/*90px 160px*/; box-sizing: border-box; }
+         height:auto; padding:100px 42px;/*90px 160px*/; box-sizing: border-box; }
 
      #newsBox > h2 { text-align: center; margin-bottom:60px; }
  
@@ -729,6 +781,8 @@ h2 > span { color:var(--color-main);}
  
      .news_list > ul > li { width:25%; height:100%; border-right:1px solid var(--color-dark_gray); }
      .news_list > ul > li:last-child { border-right:0; }
+
+     .news_list > ul > li:hover { font-weight:bold;}
      
      .news_list a { 
          display:block; 
@@ -740,10 +794,13 @@ h2 > span { color:var(--color-main);}
      .news_area > ul { width: 100%; height: 100%; }
  
      .news_area > ul > li { 
-         position: relative; 
-         width: 100%; height:320px; margin-bottom:20px; }
+        overflow: hidden;
+        position: relative; 
+        width: 100%; height:320px; margin-bottom:20px; }
  
-     .news_area li div { width: 100%; height: 100%; }
+     .news_area li div { width: 100%; height: 100%; transition: all 1s;   }
+
+     .news_area li:hover div { transform: scale(1.2);}
  
      .news_area dl { 
          position: absolute; bottom: 0; 
@@ -809,6 +866,7 @@ h2 > span { color:var(--color-main);}
 
 /* design size 1420px */
 @media screen and (min-width:1025px) {
+    #wrap { padding-top:120px;}
 
     .headBox_wrap { 
         position: fixed; z-index: 1000; transition: top 300ms ease;
@@ -850,11 +908,19 @@ h2 > span { color:var(--color-main);}
         font-size:14px; font-family:var(--font-nanum); color:var(--color-black);}
 
     .unbBox dl {width:100%; height:auto; }
-    .unbBox dt {width:100%; height:100%; }
+    .unbBox dt { position: relative; width:100%; height:100%; }
     .unbBox dt > button { width:100%; height:100%; text-align:center; color:var(--color-black);}
-    .unbBox dd {width:100%; height:auto; padding-top:20px; box-sizing: border-box;}
-    .unbBox a { display:block; width: 100%; height: 100%; text-align: right; margin-bottom: 10px;}
+    .unbBox dd {
+        position: absolute; top:40px; right:0; z-index: 900;
+        width:50%; height:95px;
+        background-color:var(--color-white); border:1px solid var(--color-black);  }
+    .unbBox dd a { 
+        display:block; width: 100%; height:auto; text-align:center; 
+        border-bottom:1px solid var(--color-black);  }
+    .unbBox dl a:last-child { border:0; }
 
+    .unbBox dd > a:hover,
+    .unbBox dd > a:focus { color:var(--color-main);}
 
     /* gnbBox */    
     .gnbBox_wrap { 
@@ -875,6 +941,11 @@ h2 > span { color:var(--color-main);}
         margin-right:30px; font-size:20px; }
     .gnbBox > ul > li:last-child { margin-right:0; }
 
+    .gnbBox dt:hover,
+    .gnbBox dt:focus { color:var(--color-main);}
+    .gnbBox dd > a:hover, 
+    .gnbBox dd > a:focus { color:var(--color-main);}
+
     .gnb_list dl { width: 100%; height:auto;  }
 
     .gnb_list dt { 
@@ -891,7 +962,7 @@ h2 > span { color:var(--color-main);}
   
     /* adverBox */
     #adverBox { 
-        position: relative; top:120px;
+        position: relative; 
         width:100%; max-width:1440px; height:860px; margin:auto; }
 
     /* indicator */
@@ -925,25 +996,31 @@ h2 > span { color:var(--color-main);}
     .adver_01 { background-image: url(../img/image/adver_img_01.jpg);}
     .adver_02 { background-image: url(../img/image/adver_img_02.jpg);}
     .adver_03 { background-image: url(../img/image/adver_img_03.jpg);}
-    .adver_04 { background-image: url(../img/image/adver_img_04.jpg);}
+    .adver_04 { background-image: url(../img/image/adver_img_04.png);}
     .adver_05 { background-image: url(../img/image/adver_img_05.jpg);}
     
     .adver_indicator li.action a { background-color:var(--color-main);}
 
     .adver_btn { 
-        display:flex;
-        position: absolute; left:50%; top:50%; transform: translate(-50%, -50%);
-        width:600px; height:auto; }
+        position: absolute; left:50%; top:40%; transform: translateX(-50%);
+        width:auto;  height:auto; }
+    
+    .adver_title { color:var(--color-white); font-size:23px; text-shadow:1px 2px 3px rgba(0, 0, 0, 0.7); }
+
+    .adver_title > span { text-transform: uppercase; }
 
     .ticket_button { 
-        width:auto; height:auto; margin-right:15px;
+        width:auto; height:auto;  
         font-family: var(--font-malgun);
+        text-shadow: 4px 2px 6px rgba(0, 0, 0, 0.7);
         font-weight:bold;  font-size:50px; color:var(--color-white); }
 
     .ticket_button a { display:block; width: 100%; height: 100%; }
 
     .click { 
-        width:100px; height:auto;
+        position: absolute; right:0;
+        width:100px; height:auto; margin:auto;
+        margin-top:10px;
         background-image: url(../img/icon/korail_site_next_icon.png);
         background-repeat: no-repeat;
         background-position: 50% 50%;
@@ -966,7 +1043,7 @@ h2 > span { color:var(--color-main);}
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
         border-radius:10px; background-color: var(--color-white); }
 
-    .icon_area li:hover { margin-top:-10px; transition:all 500ms ease; }
+    .icon_area li:hover { transform: translateY(-10px); transition:all 500ms ease; }
 
     .icon_area a { display:block; width: 100%; height: 100%; }
 
@@ -992,9 +1069,7 @@ h2 > span { color:var(--color-main);}
     .list_04 dt { background-image: url(../img/icon/icon_04.png);}
 
 
-
     /* conBox */
-
     #conBox { width:100%; max-width:1440px; height:1150px; margin:auto; padding:120px 10px 0; box-sizing: border-box;}
 
     #conBox > h2 { font-size:40px; text-align: center; margin-bottom:110px; }
@@ -1004,25 +1079,31 @@ h2 > span { color:var(--color-main);}
         width:90%; height:auto; margin:auto; margin-bottom:8.4507vw/*120px*/; }
 
     .korail_img { 
+        opacity: 0; transform: translateY(-5rem); transition: all 800ms linear 700ms;
         order:2; width:650px; height:500px;
         background-image: url(../img/image/con_img.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 10% 50%;
     }
+    .korail_img.action { opacity: 1; transform: translateY(0);  }
 
     .korail_p { 
         width:600px; height:auto; 
+        opacity: 0; transform: translateX(-250px); transition:all 800ms linear; 
         padding:2.8169vw/*40px*/; box-sizing: border-box; }
+
+    .korail_p.action { opacity: 1; transform: translate(0);}
 
     .korail_p > dl { width:100%; height:auto;}
 
     .korail_p dt { 
         width:100%; height:auto;
-        font-size:28px; margin-top:150px;
-        margin-bottom:3.8732vw/*55px*/; font-family:var(--font-malgun);  }
+        font-size:28px; margin-top:150px; 
+        margin-bottom:3.8732vw/*55px*/; font-family:var(--font-malgun); } 
 
-    .korail_p dd { width:100%; height:auto; font-size:18px; line-height: 40px;}
+    .korail_p dd { 
+        width:100%; height:auto; font-size:18px; line-height: 40px; }
 
     .korail_p span { font-weight: bold; }
 
@@ -1036,7 +1117,7 @@ h2 > span { color:var(--color-main);}
     .more_button > a { display:block; width: 100%; height: 100%; position: relative; transition: all 200ms linear;}
 
     .more_button a:hover,
-    .more_button a:active { color:var(--color-white); }
+    .more_button a:focus { color:var(--color-white); }
     .more_button a:before { 
          content:" "; display: block; z-index:-1;
          position: absolute; top:50%; left:50%; transform:translate(-50%, -50%) rotate(45deg) ;
