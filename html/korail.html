@@ -35,8 +35,8 @@
   <!-- layout -->
   <div id="wrap">
       <div class="headBox_wrap">
-      <header id="headBox">
-          <div class="align">
+      <header id="headBox" class="clearfix">
+        <!-- <div class="align"> -->
           <h1 class="hidden_wrap"><a href="./korail.html"><span>korail logo</span></a></h1>
 
           <nav class="unbBox">
@@ -44,12 +44,25 @@
               <ul>
                   <li><a href="#">로그인</a></li>
                   <li><a href="#">통합회원가입</a></li>
-                  <li><a href="#">english</a></li>
+                  <li>
+                      <!-- <a href="#">english</a> -->
+                      <dl>
+                          <dt aria-label="현재 페이지는 한국어로 설정되어 있습니다.">
+                              <!-- <span class="hidden_context">
+                                웹페이지 언어설정, 현재언어는
+                              </span> -->
+                              <button type="button" aria-hidden="true">한국어</button>
+                              <!-- <span class="hidden_context">입니다.</span> -->
+                          </dt>
+                          <dd>
+                              <a href="#">english</a>
+                              <a href="#">Chinese (中國語 )</a>
+                              <a href="#">Japanese (日本語)</a>
+                          </dd>
+                      </dl>
+                </li>
               </ul>
           </nav>
-
-
-
           <nav class="gnbBox_wrap">
               <h2 class="hidden_context">global navigation</h2>
               <div class="gnbBox">
@@ -58,64 +71,76 @@
                           <span class="hidden_context">global navigation 버튼</span>
                       </button>
                   </div>
-
                   <div class="intro_area">
                       <span>대한민국의 내일 <br> 국민의 코레일</span>
                   </div>
                   <ul class="gnb_list">
-                      <li>
+                      <!-- <li>
                           <dl>
                               <dt><a href="#">정보공개</a></dt>
-                              <dd><a href="#">사전정보공표</a></dd>
-                              <dd><a href="#">정보목록</a></dd>
+                              <dd>
+                                <a href="#">사전정보공표</a>
+                                <a href="#">정보목록</a>
+                              </dd>
                           </dl>
                       </li>
                       <li>
                         <dl>
                             <dt><a href="#">사업분야</a></dt>
-                            <dd><a href="#">여객사업</a></dd>
-                            <dd><a href="#">광역철도사업</a></dd>
-                            <dd><a href="#">종합물류사업</a></dd>
-                            <dd><a href="#">자산개발사업</a></dd>
+                            <dd>
+                              <a href="#">여객사업</a>
+                              <a href="#">광역철도사업</a>
+                              <a href="#">종합물류사업</a>
+                              <a href="#">자산개발사업</a>
+                            </dd>
                         </dl>
                     </li>
                     <li>
                         <dl>
                             <dt><a href="#">열린경영</a></dt>
-                            <dd><a href="#">지속가능경영</a></dd>
-                            <dd><a href="#">철도안전</a></dd>
-                            <dd><a href="#">윤리경영</a></dd>
+                            <dd>
+                              <a href="#">지속가능경영</a>
+                              <a href="#">철도안전</a>
+                              <a href="#">윤리경영</a>
+                            </dd>
                         </dl>
                     </li>
                     <li>
                         <dl>
                             <dt><a href="#">사이버홍보실</a></dt>
-                            <dd><a href="#">보도자료</a></dd>
-                            <dd><a href="#">코레일sns</a></dd>
-                            <dd><a href="#">공지사항</a></dd>
+                            <dd>
+                              <a href="#">보도자료</a>
+                              <a href="#">코레일sns</a>
+                              <a href="#">공지사항</a>
+                            </dd>
                         </dl>
                     </li>
                     <li>
                         <dl>
                             <dt><a href="#">고객지원</a></dt>
-                            <dd><a href="#">고객의소리</a></dd>
-                            <dd><a href="#">고객서비스헌장</a></dd>
+                            <dd>
+                              <a href="#">고객의소리</a>
+                              <a href="#">고객서비스헌장</a>
+                            </dd>
                         </dl>
                     </li>
                     <li>
                         <dl>
                             <dt><a href="#">코레일소개</a></dt>
-                            <dd><a href="#">계열사</a></dd>
-                            <dd><a href="#">채용정보</a></dd>
-                            <dd><a href="#">경영공시</a></dd>
-                            <dd><a href="#">철도명예의전당</a></dd>
+                            <dd>
+                              <a href="#">계열사</a>
+                              <a href="#">채용정보</a>
+                              <a href="#">경영공시</a>
+                              <a href="#">철도명예의전당</a>
+                           </dd>
                         </dl>
-                    </li>
+                    </li> -->
                   </ul>
               </div> <!--gnbBox-->
           </nav> 
-        </div>
+        <!-- </div> -->
       </header><!--headBox-->
+      
     </div>
 
       <section id="adverBox">
@@ -144,7 +169,6 @@
             <div class="ticket_button"><a href="#">승차권예매 바로가기</a></div>
             <div class="click"><span class="hidden_context">클릭</span></div>
           </div>
-        
       </section><!--adverBox-->
 
       <div class="icon_wrap">
@@ -305,6 +329,22 @@
   <script src="../js/src/korail_responsive.js"></script>
   <script src="../js/src/korail_responsive_import.js"></script>
 
+  <script src="../js/src/headBox_pc.js"></script>
   <script src="../js/src/adverBox.js"></script>
+
+  <script>
+    var headBoxWrap  = $('.headBox_wrap');
+    var headBox = $('#headBox');
+    var headContent = headBox.contents();
+    var winW = $(window).outerWidth();
+
+    if(winW <= 500){
+      headBox.append('<div class="align"></div>');
+      $('.align').append(headContent);
+
+    //   headContent.wrap('<div class="align"></div>');
+     }
+
+</script>
 </body>
 </html>
