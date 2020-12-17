@@ -28,9 +28,8 @@
   adverLi_after.css({'width':100/adverLi_after + '%' });
 
 
-
   // 인디케이터 클릭시 슬라이드 이동==============================================================
-  indiLi.children('a').on('click',function(e){
+  indiLi.children('a').on('click focus',function(e){
     e.preventDefault();
 
     var it = $(this);
@@ -47,6 +46,9 @@
 
     }//indiLi   
   });
+
+  //인디케이터 포커스
+  
 
 
 
