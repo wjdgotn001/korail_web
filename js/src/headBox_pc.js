@@ -70,7 +70,7 @@
   });
   
   gnbBoxDtLink.on('focus',gnbSlideDown);
-  gnbBoxDtLink.eq(-1).on('blur',gnbSlideUp);
+  gnbBoxDdLink.eq(-1).on('blur',gnbSlideUp);
 
 
 // 상단고정==============================================
