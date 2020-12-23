@@ -1,0 +1,48 @@
+/* fotBox_mobile.css / design 480px */
+
+@media screen and (max-width:480px) {
+
+    /* footBox */
+    #footBox { height:250px; } 
+
+    .site { 
+        width: 100%; height:60px; margin:auto; 
+        padding:15px; box-sizing: border-box; 
+        background-color: #bdbebd; } 
+    
+    .site > ul { display:flex; width:100%; height:100%; padding:8px 0; box-sizing: border-box;}
+
+    .site > ul > li { 
+        width:33.333333%; height:100%; border-right:1px solid var(--color-black);
+        font-size:11px; line-height:14px; text-align:center; }
+
+    .site > ul > li:nth-child(1) { width:85px;}
+    .site > ul > li:last-child { border-right:0; }
+
+    .site a { display:block; width: 100%; height: 100%; }
+
+    .site .upper { text-transform: uppercase; }
+
+    .company_info { 
+        width: 100%; height:auto; 
+        padding:20px; box-sizing: border-box;  }
+
+    .foot_logo { 
+        width:100px; height:40px; margin-bottom:10px; 
+        background-image: url(../../../img/icon/korail_logo_white.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position:50% 50%; }
+ 
+    address p { 
+        width: 100%; height:auto; 
+        font-size:11px; font-family:var(--font-nanum); 
+        font-style:normal; line-height:18px;
+        margin-bottom:10px; color:var(--color-white); }
+
+    address p:nth-child(1) { display:none; }
+
+    address span { margin-right:10xp; }
+
+
+}

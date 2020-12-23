@@ -1,0 +1,71 @@
+/* reservationBox_mobile.css / design 460px */
+
+@media screen and (max-width:480px) {
+
+    /* reservationBox */
+    #reservationBox { 
+        height:220px; padding:20px 10px; box-sizing: border-box;
+        background-image: url(../../../img/image/business_baground.png);
+        background-repeat:no-repeat;
+        background-size: cover;
+        background-position:70% 50%;
+     }
+
+    .reservation_area {  
+        width:210px; height:100%; 
+        padding:15px 10px; box-sizing: border-box;
+        background-color: rgba(0, 0, 0, 0.5); }
+
+    .reservation_area > h3 {  
+        display:flex; font-style: italic;
+        text-transform: uppercase; color:var(--color-white); width:auto; height:30px; 
+        font-family:var(--font-malgun); font-weight:600; font-size:18px; }
+
+    .reservation_area > h3:before { 
+        display:block; content:" "; width:30px; height:30px; 
+        margin-right:10px;
+        background-image: url(../../../img/icon/business_title_icon.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size:contain; }
+
+    .reservation_area > p {  
+        font-size:11px; color:var(--color-white); 
+        font-family:var(--font-nanum); margin-bottom:25px; }
+
+    .ticket_reservation,
+    .korail_site  { 
+        width:100%; height:35px; margin-bottom: 5px;
+        border:1px solid var(--color-white); box-sizing: border-box;}
+
+    .ticket_reservation > a,
+    .korail_site > a { 
+        display: flex; justify-content: space-between;
+        width: 100%; height: 100%; 
+        font-weight:600; font-family:var(--font-malgun);
+        padding:7px; box-sizing: border-box;
+        font-size:13px;  }
+
+    .ticket_reservation .next_icon ,
+    .korail_site .next_icon { 
+        width:30px; height:auto; margin-top:5px;
+        background-image: url(../../../img/icon/korail_site_next_icon.png);
+        background-repeat: no-repeat;
+        background-size:contain;  }
+  
+    #wrap .korail_site > a, 
+    #wrap .ticket_reservation > a {  color:var(--color-white); }
+
+     /* ticket_reservation:hover */
+     .ticket_reservation span:nth-child(1):after,
+     .korail_site span:nth-child(1):after { 
+         display: block;
+         content:" "; border-bottom:1px solid var(--color-white);
+         transform:scaleX(0);
+         transition: transform 250ms ease-in-out;
+     }
+     .ticket_reservation span:nth-child(1):hover:after, 
+     .korail_site span:nth-child(1):hover:after { transform:scaleX(1); }
+
+
+}

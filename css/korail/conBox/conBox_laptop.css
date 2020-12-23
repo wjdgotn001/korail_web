@@ -1,0 +1,64 @@
+/* conBox_laptop.css / design 1420px */
+
+@media screen and (min-width:1025px) {
+
+    /* conBox */
+    #conBox { width:100%; max-width:1440px; height:1150px; margin:auto; padding:120px 10px 0; box-sizing: border-box;}
+
+    #conBox > h2 { font-size:40px; text-align: center; margin-bottom:110px; }
+
+    .intro_wrap { 
+        display:flex; justify-content: space-between; 
+        width:90%; height:auto; margin:auto; margin-bottom:100px; }
+
+    .korail_img { 
+        opacity: 0; transform: translateY(-5rem); transition: all 800ms linear 700ms;
+        order:2; width:650px; height:500px;
+        background-image: url(../../../img/image/con_img.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 10% 50%;
+    }
+    .korail_img.action { opacity: 1; transform: translateY(0);  }
+
+    .korail_p { 
+        width:600px; height:auto; 
+        opacity: 0; transform: translateX(-250px); transition:all 800ms linear; 
+        padding:2.8169vw/*40px*/; box-sizing: border-box; }
+
+    .korail_p.action { opacity: 1; transform: translate(0);}
+
+    .korail_p > dl { width:100%; height:auto;}
+
+    .korail_p dt { 
+        width:100%; height:auto;
+        font-size:28px; margin-top:150px; 
+        margin-bottom:3.8732vw/*55px*/; font-family:var(--font-malgun); } 
+
+    .korail_p dd { 
+        width:100%; height:auto; font-size:18px; line-height: 40px; }
+
+    .korail_p span { font-weight: bold; }
+
+    .more_button { 
+        overflow: hidden;
+        width:180px; height:60px; margin:auto; 
+        font-size:20px; text-align: center; 
+        transition:all 0.5s;
+        line-height: 60px;  border:1px solid var(--color-black); }
+
+    .more_button > a { display:block; width: 100%; height: 100%; position: relative; transition: all 200ms linear;}
+
+    .more_button a:hover,
+    .more_button a:focus { color:var(--color-white); }
+    .more_button a:before { 
+         content:" "; display: block; z-index:-1;
+         position: absolute; top:50%; left:50%; transform:translate(-50%, -50%) rotate(45deg) ;
+         width:120%; height:0; 
+        background-color: var(--color-main); transition: all 1s; }
+
+    .more_button a:hover:before { height:300%; } 
+
+
+
+}

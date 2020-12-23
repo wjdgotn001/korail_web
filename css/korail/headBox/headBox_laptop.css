@@ -1,0 +1,99 @@
+/* headBox_laptop.css / design 1420px */
+
+@media screen and (min-width:1025px) {
+
+    #wrap { padding-top:120px;}
+
+    .headBox_wrap { 
+        position: fixed; z-index: 1000; transition: top 300ms ease;
+        top: 0; left: 0;
+        width: 100%; height:auto; background-color: var(--color-white); }
+
+    #headBox { 
+        position: relative; width:100%; max-width:1440px; height:auto; 
+        padding-top: 50px; box-sizing: border-box; margin:auto; }
+    
+    #headBox h1 { 
+        float: left;
+        width:200px; height:60px; margin-top:5px;
+        background-image: url(../../../img/icon/Korail_logo.png);
+        background-repeat: no-repeat;
+        background-position:50% 50%;
+        background-size: contain; }
+
+    /* unbBox */
+    .unbBox { 
+        position: absolute; top:0; right:0;
+        width:100%; max-width:1440px; height:50px; 
+        padding:10px; box-sizing: border-box;
+        border-bottom:1px solid #a9a9a9;
+        margin:auto;  } 
+
+    .unbBox > ul { 
+        display:flex; 
+        position: absolute; right:10px;
+        width:auto; height:30px; }
+
+    .unbBox > ul > li { width:100px; height:100%; margin-right:10px; line-height:30px; }
+    .unbBox > ul > li:last-child { margin:0; }
+
+    .unbBox a { 
+        display:block; 
+        text-align: center;
+        width: 100%; height: 100%;
+        font-size:14px; font-family:var(--font-nanum); color:var(--color-black);}
+
+    .unbBox dl {width:100%; height:auto; }
+    .unbBox dt { position: relative; width:100%; height:100%; }
+    .unbBox dt > button { width:100%; height:100%; text-align:center; color:var(--color-black);}
+    .unbBox dd {
+        position: absolute; top:40px; right:0; z-index: 900;
+        width:50%; height:95px;
+        background-color:var(--color-white); border:1px solid var(--color-black);  }
+    .unbBox dd a { 
+        display:block; width: 100%; height:auto; text-align:center; 
+        border-bottom:1px solid var(--color-black);  }
+    .unbBox dl a:last-child { border:0; }
+
+    .unbBox dd > a:hover,
+    .unbBox dd > a:focus { color:var(--color-main);}
+
+    /* gnbBox */    
+    .gnbBox_wrap { 
+        float: right; width:70.4225vw; max-width:1000px; margin:auto; height:70px; }
+
+    .gnbBox { 
+        width:auto; height:auto; margin:auto;
+        background-color: var(--color-white);  }
+
+    .gnb_btn { display:none; }
+    .intro_area { display:none; }
+    
+    .gnbBox > .gnb_list { 
+        display:flex; width:100%; height:100%; min-height:100%; background-color: ; }
+
+    .gnbBox > ul > li { 
+        width:16.666vw; height:100%; 
+        margin-right:30px; font-size:20px; }
+    .gnbBox > ul > li:last-child { margin-right:0; }
+
+    .gnbBox dt:hover,
+    .gnbBox dt:focus { color:var(--color-main);}
+    .gnbBox dd > a:hover, 
+    .gnbBox dd > a:focus { color:var(--color-main);}
+
+    .gnb_list dl { width: 100%; height:auto;  }
+
+    .gnb_list dt { 
+        position: relative; width:100%; height:70px; font-size:20px; 
+        color:var(--color-black); text-align: center; 
+        line-height:70px; font-family:var(--font-malgun); }
+
+    .gnb_list dd { 
+        width:100%; height:auto; text-align: center; font-size:17px; padding-bottom:30px;}
+        
+    .gnb_list dt a { display:block; width: 100%; height: 100%; }
+
+    .gnb_list dd a { display:block; width:100%; height:auto; padding:15px 10px; box-sizing: border-box; }
+
+}

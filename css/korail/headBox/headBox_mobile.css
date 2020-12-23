@@ -1,0 +1,101 @@
+/* headBox_mobile.css / design 460px */
+
+@media screen and (max-width:480px){
+
+    #wrap a { color:#333;}
+
+    /* headBox */
+    #headBox { position: relative; height:60px; padding:10px; box-sizing: border-box; }
+    
+    .align { display:flex; justify-content: space-between;  }
+
+    #headBox h1 { 
+        position: absolute; left:50%; z-index: 50; transform: translateX(-50%);
+        width:100px; height:40px;
+        background-image: url(../../../img/icon/Korail_logo.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size:contain; }
+
+    #headBox .gnbBox { order:1; }    
+    /* #headBox h1 { order:2; }     */
+    #headBox .unbBox { order:2; }    
+
+    /* unbBox */
+    .unbBox { width:auto; height:40px; }
+
+    .unbBox > ul { display:flex; flex-direction: column; width:100%; height:100%; }
+
+    .unbBox > ul > li { width:100%; height:100%; text-align: right; font-size:12px; line-height: 20px; }
+
+    .unbBox > ul > li:last-child { display:none; }
+
+    .unbBox a { display:block; width: 100%; height: 100%; }
+
+    /* gnbBox */
+    .gnbBox_wrap { width:25px; height:25px; margin-top:5px; }
+
+    /* gnbBox 클릭 */
+    .gnbBox { 
+        position: absolute; top:0; left:0; z-index:900;
+        width:250px; height:auto; min-height:350px; 
+        background-color: var(--color-white); }
+    
+    .gnbBox > .gnb_list { width:100%; height:auto; }
+
+    .gnb_btn, .gnb_btn > button { 
+        position:relative; 
+        width:100%; height:100%; z-index: 1000;
+        background-color: var(--color-white); }
+
+    .gnb_btn i {
+        display:block; position: absolute;
+        width: 100%; height:4px; 
+        top:0; bottom: 0; left:0; right:0; margin:auto;
+        border-radius:5px; opacity: 1; transition:all 300ms ease; 
+        background-color: var(--color-main); }
+
+    /* .line_01 { } */
+    .line_02 { transform: translateY(-9px); }
+    .line_03 { transform: translateY(9px);}
+
+    .gnb_btn.on i { background-color:var(--color-white);}
+    .gnb_btn.on { background-color:var(--color-main);}
+    .gnb_btn.on > button { background-color:var(--color-main);}
+    .gnb_btn.on .line_01 { opacity: 0;}
+    .gnb_btn.on .line_02 { transform: translateY(0) scale(1.1) rotate(45deg); }
+    .gnb_btn.on .line_03 { transform: translateY(0) scale(1.1) rotate(-45deg); }
+
+    .intro_area { 
+        width:100%; height:100px; 
+        font-family:'NanumGothic'; text-align: center;
+        font-size:15px; font-weight: 500; padding-top:30px; box-sizing: border-box;
+        color:var(--color-white); background-color: var(--color-main); }
+
+    .gnbBox li { width:100%; height:auto; }
+
+    .gnbBox dl { width:100%; height:auto; background-color:var(--color-white); }
+
+    .gnbBox dt { 
+        width: 100%; height:40px; 
+        border-bottom:1px solid #bdbebd;
+        border-top:1px solid #bdbebd;
+        box-sizing: border-box;
+        font-weight:600; 
+        font-size:13px; font-family:'NanumGothic'; line-height:37px;
+        text-indent:30px; }
+
+    .gnbBox dd { 
+       display: none;
+        width: 100%; height:auto; 
+        font-size:11px; font-family:'Malgun Gothic'; line-height:30px;
+        text-indent:30px; }
+    
+    .gnbBox dd > a { 
+        display:block;
+        width:100%; height:30px; }
+    
+    .gnbBox dt > a { 
+          display:block; width: 100%; height: 100%; }
+
+}

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!-- natuur.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../font/fontawesome/css/all.css">
+  <link rel="stylesheet" href="../font/MalgunGothicBold/MalgunGothicBold.css">
+  <link rel="stylesheet" href="../font/NanumGothic/nanum.css">
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <link rel="stylesheet" href="../css/korail.css">
+
+  <!--[if IE]>
+    <link rel="stylesheet" href="../font/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="../font/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="../font/fontawesome/css/solid.css">
+
+    <script src="../ie/html5shiv/src/html5shiv.js"></script>
+    <script src="../ie/css3pie/PIE_IE678.js"></script>
+    <script src="../ie/css3pie/PIE_IE9.js"></script>
+    <script src="../ie/ie9.min.js"></script>
+    <script src="../ie/respond/src/respond.js"></script>
+    <script src="../ie/modernizr-custom.js"></script>
+
+    <link rel="stylesheet" href="../css/ie_natuur/ie_natuur.css">
+    <link rel="shortcut icon" href="../img/icon_01.png" type="image/png" />
+  <![endif]-->
+  <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../img/favicon.png">
+
+  <title>코레일</title>
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <div class="headBox_wrap">
+        <header id="headBox" class="clearfix">
+          <!-- <div class="align"> -->
+            <h1 class="hidden_wrap"><a href="./korail.html"><span>korail logo</span></a></h1>
+  
+            <nav class="unbBox">
+                <h2 class="hidden_context">user navigation</h2>
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">통합회원가입</a></li>
+                    <li class="lan">
+                        <!-- <a href="#">english</a> -->
+                        <dl>
+                            <dt aria-label="현재 페이지는 한국어로 설정되어 있습니다.">
+                                <!-- <span class="hidden_context">
+                                  웹페이지 언어설정, 현재언어는
+                                </span> -->
+                                <button type="button" aria-hidden="true">한국어</button>
+                                <!-- <span class="hidden_context">입니다.</span> -->
+                            </dt>
+                            <dd>
+                                <a href="#">english</a>
+                                <a href="#">Chinese (中國語 )</a>
+                                <a href="#">Japanese (日本語)</a>
+                            </dd>
+                        </dl>
+                  </li>
+                </ul>
+            </nav>
+            <nav class="gnbBox_wrap">
+                <h2 class="hidden_context">global navigation</h2>
+                <div class="gnb_btn">
+                    <button type="button">
+                        <span class="hidden_context">메뉴</span>
+                        <i class="line_01"></i>
+                        <i class="line_02"></i>
+                        <i class="line_03"></i>
+                    </button>
+                </div>
+                <div class="gnbBox">
+                    <div class="intro_area">
+                        <span>대한민국의 내일 <br> 국민의 코레일</span>
+                    </div>
+                    <ul class="gnb_list">
+                    </ul>
+                </div> <!--gnbBox-->
+            </nav> 
+          <!-- </div> -->
+        </header><!--headBox-->
+    </div> 
+
+    <div id="loginBox">
+      <h2>회원로그인</h2>
+      <div class="loc_area">
+        <a href="./korail.html">홈</a>
+        <a href=".//login.html">로그인</a>
+      </div>
+      <div class="con_area">
+        <img src="../img/image/login_img.jpg" alt="로그인페이지 광고영역">
+        <div class="input_area">
+          <form action="#" method="post">
+            <fieldset class="login_check">
+              <legend>로그인방식 선택</legend>
+              <ul>
+                <li>
+                  <input type="radio" id="email_login" name="login_check" value="이메일 로그인체크" class="hidden">
+                  <label for="email_login">이메일 로그인</label>
+                </li>
+                <li>
+                  <input type="radio" id="membership_login" name="login_check" value="멤버십번호 로그인체크" class="hidden">
+                  <label for="membership_login">멤버십번호 로그인</label>
+                </li>
+                <li>
+                  <input type="radio" id="phone_login" name="login_check" value="휴대번호 로그인체크" class="hidden">
+                  <label for="phone_login">휴대번호 로그인</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="login_info">
+              <legend>로그인정보 입력</legend>
+              <div class="login_box">
+                <ul>
+                  <li>
+                    <label for="userId">아이디</label>
+                    <input type="text" id="userId" name="userId" value=""  placeholder="아이디를 입력하세요." required>
+                  </li>
+                  <li>
+                    <label for="userPw">비밀번호</label>
+                    <input type="text" id="userPw" name="userPw" value=""  placeholder="비밀번호를 입력하세요." required>
+                  </li>
+                </ul>
+              </div>
+              <div class="login_btn">
+                <button type="submit">로그 인</button>
+              </div>
+            </fieldset>
+          </form>
+        </div> <!-- input_area -->
+      <div class="find_area">
+          <ul>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">아이디찾기</a></li>
+            <li><a href="#">비밀번호찾기</a></li>
+          </ul>
+      </div>
+      <div class="certi_area">
+        <button type="button">휴대폰 본인인증</button>
+        <button type="button">아이핀 본인인증</button>
+      </div>
+      <p>타인의 주민등록번호를 부정사용하면 3년이하의 징역 또는 1천만원 이하의 벌금에 처해지게 됩니다.</p>
+      <p>고객센터문의(1544-7788,1688-7788)</p>
+      </div>
+
+      <div class="eval_area">
+        <h3 class="hidden_context">만족도평가</h3>
+        <p>해당페이지에 대한 만족도를 평가하여 주십시오.</p>
+        <fieldset class="eval_check">
+          <legend>만족도평가</legend>
+          <ul>
+            <li>
+              <input type="radio" id="satis1" name="evaluation" value="매우만족" class="hidden">
+              <label for="satis1">매우 만족</label>
+            </li>
+            <li>
+              <input type="radio" id="satis2" name="evaluation" value="만족" class="hidden">
+              <label for="satis2">만족</label>
+            </li>
+            <li>
+              <input type="radio" id="satis3" name="evaluation" value="보통" class="hidden">
+              <label for="satis3">보통</label>
+            </li>
+            <li>
+              <input type="radio" id="satis4" name="evaluation" value="불만족" class="hidden">
+              <label for="satis4">불만족</label>
+            </li>
+            <li>
+              <input type="radio" id="satis5" name="evaluation" value="매우 불만족" class="hidden">
+              <label for="satis5">매우 불만족</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="opinion">
+          <label for="opinion">의견달기</label>
+          <input type="text" id="opinion" name="opinion" value="" >
+          <button type="submit">제출</button>
+        </fieldset> 
+      </div> <!--eval_area-->
+    </div>  <!--loginBox-->
+
+    <div class="foot_wrap">
+        <footer id="footBox">
+            <h2 class="hidden_context">회사정보</h2>
+            <div class="site">
+              <ul>
+                 <li>관련사이트</li>
+                 <li><a href="#"><span class="upper">alio</span>정보시스템</a></li>
+                 <li><a href="#">대한민국정부포털</a></li>
+                 <li><a href="#">안전신문고</a></li>
+            </ul>
+          </div>
+  
+            <div class="company_info">
+                <div class="foot_logo"></div>
+                <address>
+                    <p><span>한국철도공사</span> <span>사업자등록:314-82-10024</span> <span>통신만매업신고:대전 동구-0233호</span></p>
+                    <p>한국철도공사 34618 대전광역시 동구 중앙로 240<br>
+                       대표전화 1544-7788<br>
+                       팩스번호 02-361-8385
+                    </p>
+                    <p>2016 &copy; by korea railroad. all right reserved.</p>
+                </address>
+          </div>
+        </footer><!--footBox-->
+    </div>
+
+  </div> <!-- wrap -->
+
+  <!-- script -->
+  <script src="../js/base/jquery-3.5.1.js"></script>
+  <script src="../js/base/jquery-ui.js"></script>
+  <script src="../font/fontawesome/js/all.js"></script>  
+  <script src="../js/src/korail_responsive.js"></script>
+  <script src="../js/src/korail_responsive_import.js"></script>
+
+  <!-- <script src="../js/src/headBox_pc.js"></script> -->
+  <!-- <script src="../js/src/adverBox.js"></script> -->
+  <!-- <script src="../js/src/conBox.js"></script> -->
+
+  <script>
+</script>
+</body>
+</html>

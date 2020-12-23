@@ -1,0 +1,67 @@
+/* newsBox_laptop.css / design 1420px */
+
+@media screen and (min-width:1025px) {
+
+        /* newsBox */
+        #newsBox { width:100%; max-width:1440px; height:1600px; margin:auto; padding:220px 10px; box-sizing: border-box; }
+
+        #newsBox > h2 { font-size:40px; text-align: center; margin-bottom:110px; }
+    
+        .news_list { width:550px; height:35px; margin:auto; margin-bottom:50px; }
+    
+        .news_list > ul { display:flex; justify-content: space-between; width: 100%; height: 100%; }
+    
+        .news_list > ul > li { 
+            width:25%; height:100%;;
+            font-size:20px; line-height:35px; 
+            border-right:1px solid var(--color-black); }
+    
+        .news_list > ul > li:last-child { border-right:0; }
+    
+        .news_list > ul > li:hover { font-weight: bold;}
+    
+        .news_list a { 
+            display:block; width: 100%; height: 100%; 
+            text-align: center; padding:0 20px; box-sizing: border-box;}
+    
+        .news_area { width:80.9859vw; max-width:1150px; height:auto; margin:auto; }
+    
+        .news_area > ul { 
+            display:flex; flex-wrap: wrap; justify-content: space-between;  
+            width: 100%; height:100%; }
+    
+        .news_area > ul > li { 
+            overflow: hidden;
+            position: relative; 
+            width:38.7323vw; max-width:550px; height:400px; 
+            margin-bottom:45px; background-color: slategray; }
+    
+        .news_area > ul > li:nth-child(3),
+        .news_area > ul > li:nth-child(4) { margin-bottom:0; }
+    
+        .news_area div {  
+            transition: 1s;
+            width: 100%; height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover; }
+    
+        .news_area li:hover > div { transform: scale(1.2);}
+    
+        .news_img01 { background-image: url(../../../img/image/news_image_01.png);}
+        .news_img02 { background-image: url(../../../img/image/news_image_02.png);}
+        .news_img03 { background-image: url(../../../img/image/news_image_03.png);}
+        .news_img04 { background-image: url(../../../img/image/news_image_04.png);}
+    
+        .news_area dl { 
+            position: absolute; bottom: 0; 
+            width: 100%; height:115px; padding:1.4084vw/*20px*/; box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.5); }
+    
+        .news_area dt, 
+        .news_area dd { font-size:21px; color:var(--color-white); }
+    
+        .news_area dt { margin-bottom:15px; }
+    
+
+
+}

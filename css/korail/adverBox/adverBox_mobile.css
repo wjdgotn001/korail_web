@@ -1,0 +1,68 @@
+/* adverBox_mobile.css / design 460px */
+
+@media screen and (max-width:480px) {
+
+    /* adverBox */
+    #adverBox { position: relative; height:76.086vw/*350px*/; }
+    /* indicator */
+    .adver_indicator { 
+        position: absolute; top:20px; left:20px; z-index:800;
+        width:auto; height:auto; }
+
+    .adver_indicator > ul { display:flex; width: 100%; height: 100%; }
+
+    .adver_indicator li { 
+        overflow: hidden;
+        width:15px; height:15px; 
+        margin-right:10px; border-radius:100%; 
+        background-color: #fff; } 
+
+    .adver_indicator a { display:block; width: 100%; height: 100%; }
+
+    .adver_indicator li.action a { background-color: var(--color-main);}
+    
+    .adver_area { 
+        overflow: hidden; 
+        position: relative; width: 100%; height: 100%; }
+
+    .adver_area > ul { display:flex; position: absolute; width:500%; height:100%; }    
+    .adver_area li { 
+        width: 20%; height:100%;
+        background-position: 50% 50%;
+        background-repeat:no-repeat;
+        background-size:cover; }    
+
+    .adver_img > .adver_01 { background-image: url(../../../img/image/adver_img_01.jpg);}
+    .adver_img > .adver_02 { background-image: url(../../../img/image/adver_img_02.jpg);}
+    .adver_img > .adver_03 { background-image: url(../../../img/image/adver_img_03.jpg);}
+    .adver_img > .adver_04 { background-image: url(../../../img/image/adver_img_04.png);}
+    .adver_img > .adver_05 { background-image: url(../../../img/image/adver_img_05.jpg);}
+
+    .adver_btn { 
+         position: absolute; left:50%; top:50%; transform: translate(-50%, -50%);
+         width:190px; height:70px; }
+
+    .adver_title { 
+        width:auto; height:auto; 
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+        color: var(--color-white); font-size:13px; margin-bottom:5px; }
+
+    .adver_title > span { text-transform: uppercase; }
+    
+    .ticket_button {  
+        width:100%; height:auto; 
+        text-align: center; font-size:20px; 
+        text-shadow:2px 2px 4px rgba(0, 0, 0, 0.7);
+        font-family:var(--font-malgun); font-weight:600; }
+
+    #wrap .ticket_button > a { display:block; width: 100%; height: 100%; color:var(--color-white);  }
+
+    .click { 
+        position: absolute; right:0; width:30px; height:20px;
+        background-image: url(../../../img/icon/korail_site_next_icon.png); 
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 50% 50%; }
+    .click > button { width:100%; height:100%; }
+
+}

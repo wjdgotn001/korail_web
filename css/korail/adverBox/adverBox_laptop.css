@@ -1,0 +1,72 @@
+/* adverBox_laptop.css / design 1420px */
+
+@media screen and (min-width:1025px) {
+
+    /* adverBox */
+    #adverBox { 
+        position: relative; 
+        width:100%; max-width:1440px; height:860px; margin:auto; }
+
+    /* indicator */
+    .adver_indicator { 
+        position: absolute; top:30px; left:30px; z-index:700;
+        width:200px; height:25px; }
+
+    .adver_indicator > ul { display:flex; justify-content: space-between; width: 100%; height: 100%; }
+
+    .adver_indicator > ul > li { 
+        width:25px; height:25px; border-radius:100%;
+        overflow: hidden; 
+        background-color: var(--color-white); }
+
+    .adver_indicator > ul > li { margin-right:0; }
+    
+    .adver_indicator a { display:block; width:100%; height:100%; }
+
+    /* adver_area */
+    .adver_area { 
+        position: relative; width: 100%; height:100%; overflow: hidden; }
+
+    .adver_area > ul { display:flex; position: absolute; width: 500%; height:100%; }
+
+    .adver_area > ul > li { 
+        width:20%; height:100%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size:cover; }
+    
+    .adver_01 { background-image: url(../../../img/image/adver_img_01.jpg);}
+    .adver_02 { background-image: url(../../../img/image/adver_img_02.jpg);}
+    .adver_03 { background-image: url(../../../img/image/adver_img_03.jpg);}
+    .adver_04 { background-image: url(../../../img/image/adver_img_04.png);}
+    .adver_05 { background-image: url(../../../img/image/adver_img_05.jpg);}
+    
+    .adver_indicator li.action a { background-color:var(--color-main);}
+
+    .adver_btn { 
+        position: absolute; left:50%; top:40%; transform: translateX(-50%);
+        width:auto;  height:auto; }
+    
+    .adver_title { color:var(--color-white); font-size:23px; text-shadow:1px 2px 3px rgba(0, 0, 0, 0.7); }
+
+    .adver_title > span { text-transform: uppercase; }
+
+    .ticket_button { 
+        width:auto; height:auto;  
+        font-family: var(--font-malgun);
+        text-shadow: 4px 2px 6px rgba(0, 0, 0, 0.7);
+        font-weight:bold;  font-size:50px; color:var(--color-white); }
+
+    .ticket_button a { display:block; width: 100%; height: 100%; }
+
+    .click { 
+        position: absolute; right:0;
+        width:100px; height:auto; margin:auto;
+        margin-top:10px;
+        background-image: url(../../../img/icon/korail_site_next_icon.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: contain; }
+
+
+}
