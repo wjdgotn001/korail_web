@@ -77,6 +77,7 @@
 var win = $(window);
 var gnbBox = $('.gnbBox');
 var headBoxWrap = $('.headBox_wrap');
+var headDt = gnbBoxUl.find('dt');
 
 // 브라우저 상단에서 떨어져 있는 거리 체크
 var gnbOffset = gnbBox.offset().top;
@@ -89,8 +90,10 @@ win.on('scroll',function(e){
 
   if(winScrollTop >= gnbOffset){
     headBoxWrap.css({'top':-gnbOffset +'px'});
+    headDt.css({'color':':#0054a6'});
   }else{
     headBoxWrap.removeAttr('style');
+    headDt.removeAttr('style');
   }
 });
 

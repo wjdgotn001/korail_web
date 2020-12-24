@@ -70,7 +70,7 @@
     .intro_area { display:none; }
     
     .gnbBox > .gnb_list { 
-        display:flex; width:100%; height:100%; min-height:100%; background-color: ; }
+        display:flex; width:100%; height:100%; min-height:100%; }
 
     .gnbBox > ul > li { 
         width:16.666vw; height:100%; 

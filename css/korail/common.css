@@ -6,9 +6,7 @@ h2 { text-transform: uppercase; font-size:30px; }
 h2 > span { color:var(--color-main);}
 
 #headBox  { width:100%; margin:auto; background-color:var(--color-white);}
-#adverBox { width:100%; margin:auto; }
-#iconBox { width:100%; margin:auto; background-color:#f6f8ff;}
-#conBox { width:100%; margin:auto; background-color:var(--color-white);}
-#reservationBox { width:100%; margin:auto;}
-#newsBox { width:100%; margin:auto; background-color:var(--color-white);}
+.loginBox_wrap { width: 100%; height:auto; background-color: var(--color-white); }
+#loginBox { width:100%; margin:auto; background-color: var(--color-white); }
+
 #footBox { width:100%; margin:auto; background-color:var(--color-gray);}
