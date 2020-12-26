@@ -86,27 +86,26 @@
     .login_btn > button { width: 100%; height: 100%; font-size:15px;  color:#fff; word-spacing:-4px;}
 
     .find_area { 
-        width:76%; max-width:450px; height:auto; margin:auto; 
+        width:auto; max-width:340px; height:auto; margin:auto; 
         margin-top:30px; margin-bottom:20px; }
 
     .find_area > ul { width: 100%; height: 100%; }
 
     .find_area > ul > li { 
-        float: left; width:135px; height:20px; 
-        font-size:15px; 
-        text-align: center; box-sizing: border-box;
+        float: left; width:auto; height:20px; 
+        font-size:15px; padding:0 20px; box-sizing: border-box;
         line-height:20px; border-right:1px solid #6a6a6a; }
 
     .find_area > ul > li:last-child { margin-right:0; border-right:0; }
 
-    .find_area a { display:block; width: 100%; height: 100%; }
+    .find_area a { display:block; width: 100%; height: 100%;  }
 
     .certi_area {
          width:60%; max-width:400px; height:70px; margin:auto; }
 
     .certi_area > button { 
         width:25vw; max-width:185px;/*160px*/ height:100%; 
-        border-radius:5px; color:#fff;
+        border-radius:5px; color:#fff; font-size: 15px;
         background-color: var(--color-main);}
 
     .certi_area > button:nth-child(1) { float: left;}
@@ -116,7 +115,7 @@
     .con_area p:nth-of-type(1) { margin-top:20px; margin-bottom:10px; }
 
     .eval_area { 
-        width:100%; height:300px; margin-top:50px; 
+        width:100%; height:auto; margin-top:50px; 
         padding:4vw 2vw;/*40px 60px*/ box-sizing: border-box;
         border:1px solid #6a6a6a; border-top:4px solid #6a6a6a; }
 
@@ -124,15 +123,12 @@
     .eval_area img { 
         float: left; width:30px; height:30px; margin-right:15px; }
 
-    .eval_check { width:100%; height:60px; margin-top:20px;  border-bottom:1px solid #6a6a6a;}
+    .eval_check { width:100%; height:150px; margin-top:20px;  border-bottom:1px solid #6a6a6a;}
 
     .eval_check > ul { width: 100%; height: 100%; }
 
     .eval_check > ul > li { 
-        float: left; width:15vw; height:auto; margin-right:15px; }
-
-    .eval_check > ul > li:nth-child(1){ width:100px; }
-    .eval_check > ul > li:nth-child(5){ width:120px; }
+        float: left; width:90%; height:auto; margin-bottom:7px; margin-right:15px; }
 
     .opinion { 
         width:100%; height:auto; margin-top:10px; }
