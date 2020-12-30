@@ -3,7 +3,7 @@
 @media screen and (max-width:480px) {
 
     /* footBox */
-    #footBox { height:250px; } 
+    #footBox { height:auto; } 
 
     .site { 
         width: 100%; height:auto; margin:auto; 

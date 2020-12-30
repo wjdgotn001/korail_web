@@ -25,7 +25,7 @@
   
       .site .upper { text-transform: uppercase;}
   
-      .company_info { display:flex; width: 100%; height:auto; padding:100px 10px; box-sizing: border-box; }
+      .company_info { display:flex; width: 100%; height:auto; padding:85 px 10px ; box-sizing: border-box; }
       .foot_logo { 
           width:200px; height:80px; margin-top:30px;
           background-image: url(../../../img/icon/korail_logo_white.png);
