@@ -26,7 +26,7 @@ hr { width:100%; height:0; border:0; margin:0;  border-bottom:1px solid #333; }
 abbr { text-decoration:none; }
 
 a:hover, a:focus,
-button:hover, button:focus { position: relative; z-index:500; outline:3px solid #f07;}
+button:hover, button:focus { position: relative; z-index:500; }
 
 
 /* form영역 */
