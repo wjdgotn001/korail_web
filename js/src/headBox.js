@@ -134,4 +134,14 @@ unbbtn.on('focus',unbSlideDown);
 unbDdbtnLink.eq(-1).on('blur',unbSlideUp);
 
 
+
+//팝업창
+var popup = $('.popup');
+var popupBtn = popup.find('button');
+popupBtn.on('click',function(e){
+  e.preventDefault();
+
+  popup.remove();
+});
+
 })(jQuery);
