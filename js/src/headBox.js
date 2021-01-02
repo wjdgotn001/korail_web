@@ -28,27 +28,27 @@ gnbBtn.on('click',function(e){
   
 //gnbList
 var gnbContent = [
-  {'title': {'name':'정보공개', 'link':'natuur.html', 'target':'_blank'},
-   'sub':[{'subT': '사전정보공표', 'subLink' : 'natuur.html'},{'subT': '정보목록', 'subLink' : 'natuur.html'}]
+  {'title': {'name':'정보공개', 'link':'korail.html', 'target':'_blank'},
+   'sub':[{'subT': '사전정보공표', 'subLink' : 'korail.html'},{'subT': '정보목록', 'subLink' : 'korail.html'}]
   },
 
-  {'title': {'name':'사업분야', 'link':'natuur.html', 'target':'_blank'},
-   'sub':[{'subT': '여객사업', 'subLink' : 'natuur.html'},{'subT': '광역철도사업', 'subLink' : 'natuur.html'},
-         {'subT': '종합물류사업', 'subLink' : 'natuur.html'},{'subT': '자산개발사업', 'subLink' : 'natuur.html'}]
+  {'title': {'name':'사업분야', 'link':'korail.html', 'target':'_blank'},
+   'sub':[{'subT': '여객사업', 'subLink' : 'korail.html'},{'subT': '광역철도사업', 'subLink' : 'korail.html'},
+         {'subT': '종합물류사업', 'subLink' : 'korail.html'},{'subT': '자산개발사업', 'subLink' : 'korail.html'}]
   },
 
-  {'title': {'name':'열린경영', 'link':'natuur.html', 'target':'_blank'},
-   'sub':[{'subT': '지속가능경영', 'subLink' : 'natuur.html'},{'subT': '철도안전', 'subLink' : 'natuur.html'},
-         {'subT': '윤리경영', 'subLink' : 'natuur.html'}]
+  {'title': {'name':'열린경영', 'link':'korail.html', 'target':'_blank'},
+   'sub':[{'subT': '지속가능경영', 'subLink' : 'korail.html'},{'subT': '철도안전', 'subLink' : 'korail.html'},
+         {'subT': '윤리경영', 'subLink' : 'korail.html'}]
   },
 
-  {'title': {'name':'사이버홍보실', 'link':'natuur.html', 'target':'_blank'},
-   'sub':[{'subT': '보도자료', 'subLink' : 'natuur.html'},{'subT': '코레일sns', 'subLink' : 'natuur.html'},
-         {'subT': '공지사항', 'subLink' : 'natuur.html'}]
+  {'title': {'name':'사이버홍보실', 'link':'korail.html', 'target':'_blank'},
+   'sub':[{'subT': '보도자료', 'subLink' : 'korail.html'},{'subT': '코레일sns', 'subLink' : 'korail.html'},
+         {'subT': '공지사항', 'subLink' : 'korail.html'}]
   },
 
-  {'title': {'name':'고객지원', 'link':'natuur.html', 'target':'_blank'},
-   'sub':[{'subT': '고객의소리', 'subLink' : 'natuur.html'},{'subT': '고객서비스헌장', 'subLink' : 'natuur.html'}]
+  {'title': {'name':'고객지원', 'link':'korail.html', 'target':'_blank'},
+   'sub':[{'subT': '고객의소리', 'subLink' : 'korail.html'},{'subT': '고객서비스헌장', 'subLink' : 'korail.html'}]
   }
 ];
 
