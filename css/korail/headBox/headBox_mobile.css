@@ -46,7 +46,7 @@
 
     .unbBox > ul { display:flex; flex-direction: column; width:100%; height:100%; }
 
-    .unbBox > ul > li { width:100%; height:100%; text-align: right; font-size:12px; line-height: 20px; }
+    .unbBox > ul > li { width:100%; height:20px; text-align: right; font-size:12px; line-height: 20px; }
 
     .unbBox > ul > li:last-child { display:none; }
 
