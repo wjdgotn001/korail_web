@@ -79,6 +79,7 @@
 
     /* gnbBox 클릭 */
     .gnbBox { 
+        display:none;
         position: absolute; top:0; left:20px; z-index:900;
         width:400px; height:auto; min-height:500px; 
         background-color:var(--color-white); }

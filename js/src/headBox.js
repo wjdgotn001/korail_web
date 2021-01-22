@@ -43,7 +43,8 @@ var gnbContent = [
   },
 
   {'title': {'name':'사이버홍보실', 'link':'korail.html', 'target':'_blank'},
-   'sub':[{'subT': '보도자료', 'subLink' : 'korail.html'},{'subT': '코레일sns', 'subLink' : 'korail.html'},
+   'sub':[{'subT': '보도자료', 'subLink' : 'korail.html'},
+         {'subT': '코레일sns', 'subLink' : 'korail.html'},
          {'subT': '공지사항', 'subLink' : 'korail.html'}]
   },
 
@@ -52,7 +53,7 @@ var gnbContent = [
   }
 ];
 
-var gnbConList =  '<li><dl><dt><span></span></dt><dd></dd></dl></li>';
+var gnbConList =  '<li><dl><dt></dt><dd></dd></dl></li>';
 var gnbBoxUl = gnbBox.children('.gnb_list');
 var gnbconLen = gnbContent.length;
 var gnbDt, gnbDd, subconLen, titleN, subN;
